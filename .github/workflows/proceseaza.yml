@@ -1,0 +1,84 @@
+name: Procesare Train Live
+
+on:
+  repository_dispatch:
+    types: [sesiune_noua, cerere_plan]
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: proceseaza-date
+  cancel-in-progress: false
+
+jobs:
+  proceseaza:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      HAS_KEY: ${{ secrets.ANTHROPIC_API_KEY != '' }}
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Worktree-uri pentru ramurile de date
+        run: |
+          set -euo pipefail
+          git config user.name "train-live-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p date
+          for b in planuri rezulate widget; do
+            git fetch --no-tags --depth=50 origin "$b:refs/remotes/origin/$b"
+            git worktree add -B "$b" "date/$b" "origin/$b"
+          done
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Self-test
+        run: python3 scripts/proceseaza.py --self-test
+
+      - name: Procesare deterministă
+        run: python3 scripts/proceseaza.py --radacina date
+
+      - name: Claude API (doar cu secretul ANTHROPIC_API_KEY)
+        if: env.HAS_KEY == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+        run: python3 scripts/claude_api.py --radacina date
+
+      - name: Validare
+        run: python3 scripts/proceseaza.py --radacina date --check
+
+      - name: Commit și push pe fiecare ramură modificată
+        env:
+          EVENT: ${{ github.event_name }}
+          ACTION: ${{ github.event.action }}
+        run: |
+          set -euo pipefail
+          for b in planuri rezulate widget; do
+            cd "date/$b"
+            if [ -n "$(git status --porcelain)" ]; then
+              git add -A
+              git commit -q -m "Procesare automata ($EVENT${ACTION:+ $ACTION})"
+              ok=0
+              for i in 1 2 3; do
+                if git push origin "HEAD:$b"; then ok=1; break; fi
+                echo "push respins pe $b, rebase ($i/3)"
+                git pull --rebase origin "$b" || { git rebase --abort || true; break; }
+              done
+              [ "$ok" = 1 ] || { echo "::error::push esuat pe $b"; exit 1; }
+            else
+              echo "$b: nimic de salvat"
+            fi
+            cd - >/dev/null
+          done
