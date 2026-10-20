@@ -12,10 +12,13 @@ Toate fișierele sunt UTF-8, chei în română fără diacritice, valori text î
 | `widget` | `progres.json` (citit de widgetul din Widget Studio și de ecranul Today) |
 
 Adrese „raw” (repo public, fără token): `https://raw.githubusercontent.com/serbanbogdan/sport/<ramura>/<cale>`.
+Toate căile din fișiere (`fisier`, `fisier_plan`, `analiza`) sunt relative la rădăcina ramurii lor (`sesiuni/S1.9.json` = `planuri:sesiuni/S1.9.json`).
 
 ---
 
 ## 1. Plan de sesiune v2 — `planuri/sesiuni/<id>.json`
+
+Exemplu prescurtat (fișierul real `planuri:sesiuni/S1.9.json` are și forța + proba; pașii lui însumează exact 2445 s):
 
 ```json
 {
@@ -23,7 +26,7 @@ Adrese „raw” (repo public, fără token): `https://raw.githubusercontent.com
   "id": "S1.9",
   "sesiune": "S1.9",
   "activitate": "alergare",
-  "data": "2026-10-21",
+  "data": "2026-10-20",
   "titlu": "Proba + 4×(2'30 alergat / 3' mers)",
   "obiectiv": "Toate cele 4 blocuri duse la capăt, fiecare pornit sub 130.",
   "nota_generala": "Zona 2 = 117-137. Alertă la 155.",
@@ -53,11 +56,16 @@ Spinning (`"activitate": "spinning"`, id-uri `SP<luna>.<n>`, ex. `SP1.1`):
 
 Reguli:
 - `tip`: `incalzire`, `alergare`, `mers`, `racire`, `forta`, `pauza`, `alt` (necunoscut → `alt`). Pentru spinning se folosesc `incalzire`, `alt` (bloc de lucru), `pauza` (pedalat ușor), `racire`.
-- `nume`: primul cuvânt = informația de executat (ritm, rpm sau exercițiu), separator ` · `, max ~40 caractere.
+- `id`: alergare `S<luna>.<n>` (ex. `S1.9`, `S2.1`), spinning `SP<luna>.<n>`; unic în `planuri/index.json`. `sesiune` = același text (pentru aplicația HTML). `data` = `AAAA-LL-ZZ`.
+- `nume`: primul cuvânt = informația de executat (ritm, rpm sau exercițiu), apoi separatorul ` · `, apoi descrierea; max 40 de caractere (ex. `7:30-8:00/km · Alergare`, `80-90 rpm · Bloc zona 2`, `Genuflexiuni · 10 repetări`).
+- `nota`: scurtă, o singură instrucțiune (apare pe ceas sub nume).
 - `durata` în secunde. `repeta` se poate imbrica.
 - `tinte` (opțional), fiecare `[min, max]`: `puls` (bpm), `ritm_min_km` (`"m:ss"`, primul = cel mai rapid), alternativ `ritm_s_km` (secunde), `cadenta_spm` (pași/min, total ambele picioare), `cadenta_rpm`, `rezistenta` (0-100, valoarea brută YESOUL = % din aplicația YESOUL), `putere_w`, `viteza_kmh`.
-- `pana_la_puls_sub` + `max_prelungire_s` (implicit 120): după `durata`, pasul continuă până pulsul scade sub prag sau expiră prelungirea.
-- Un fișier v1 (fără `schema_version`) rămâne valid; `activitate` lipsă = `alergare`.
+- `rezistenta_pct` e acceptat ca alias pentru `rezistenta` (citire), dar se scrie `rezistenta`.
+- `pana_la_puls_sub` + `max_prelungire_s` (implicit 120): după `durata`, pasul continuă până pulsul scade sub prag sau expiră prelungirea. Obligatoriu pe mersul de refacere dintre blocuri (`130`, sau pragul `praguri.puls_reluare`).
+- `praguri`: `puls_alerta` (implicit 155), `puls_reluare` (130), `zona_lucru` (`[117, 137]`), `puls_max` (195).
+- Un fișier v1 (fără `schema_version`) rămâne valid; `activitate` lipsă = `alergare`. Un plan v2 poate păstra `"versiune": 1` pentru aplicația HTML.
+- Validare: `scripts/proceseaza.py --check` (aceleași reguli ca `PlanParser` din aplicație: `pasi` nevid, `durata` întreg > 0, fiecare țintă `[min, max]`).
 
 ## 2. Calendar — `planuri/index.json`
 
@@ -67,12 +75,13 @@ Reguli:
   "actualizat_la": "2026-10-20T19:05:00+03:00",
   "urmatoarea": { "alergare": "S1.9", "spinning": "SP1.1" },
   "sesiuni": [
-    { "id": "S1.9", "activitate": "alergare", "data": "2026-10-21", "titlu": "Proba + 4×(2'30/3')",
+    { "id": "S1.9", "activitate": "alergare", "data": "2026-10-20", "titlu": "Proba + 4×(2'30/3')",
       "fisier": "sesiuni/S1.9.json", "status": "planificat", "rezultat_id": null, "durata_s": 2445 }
   ]
 }
 ```
-`status`: `planificat` | `realizat` | `ratat` | `anulat` | `inlocuit`.
+`status`: `planificat` | `realizat` | `ratat` | `anulat` | `inlocuit`. `durata_s` = suma duratelor pașilor (fără prelungiri).
+`urmatoarea.<activitate>` = id-ul următoarei sesiuni `planificat` (sau `null`). `proceseaza.py` pune `realizat` + `rezultat_id` când un rezultat are acel `plan_id` și mută pointerul. Aplicația: `planificat` = se importă automat; `realizat` = marcat făcut local; `anulat`/`inlocuit` = șters local dacă nu era făcut.
 
 ## 3. Cerere din aplicație — `planuri/cereri/<id>.json`
 
@@ -91,11 +100,13 @@ Reguli:
   "raspuns": null
 }
 ```
-`tip`: `plan_nou` (mai multe sesiuni) | `sesiune_urmatoare` | `reanaliza`. `status`: `nou` → `in_lucru` → `gata` / `eroare`. La final `raspuns = { "la": "...", "mesaj": "...", "fisiere": ["sesiuni/S2.1.json", ...] }`.
+`tip`: `plan_nou` (mai multe sesiuni) | `sesiune_urmatoare` | `reanaliza`. `activitate`: `alergare` | `spinning` | `ambele`. `zile_disponibile`: zile ale săptămânii în română fără diacritice (`luni` … `duminica`); listă goală = oricare, cu regulile de odihnă.
+`status`: `nou` → `in_lucru` → `gata` / `eroare`. La final `raspuns = { "la": "...", "mesaj": "...", "fisiere": ["sesiuni/S2.1.json", ...] }`.
+Câmpuri opționale scrise de aplicație: `procesat_de` (`"aplicatie"` când răspunde direct prin Claude API, altfel `null`), `eroare_api` (textul erorii când apelul direct a eșuat și cererea a revenit la `nou`).
 
 ## 4. Rezultat de sesiune — `rezulate/sesiuni/AAAA/LL/<id>.json`
 
-`id` = `AAAA-LL-ZZTHH-MM-SS_<activitate>` (ora locală de start).
+`id` = `AAAA-LL-ZZTHH-MM-SS_<activitate>` (ora locală de start). Calea: `sesiuni/AAAA/LL/<id>.json`, AAAA/LL din id. Fișierul poate avea câțiva MB (eșantioane 1 Hz); se încarcă prin Contents API.
 
 ```json
 {
@@ -154,6 +165,8 @@ Reguli:
 }
 ```
 
+`km`: ultimul kilometru incomplet are `"partial": true` și `distanta_m` (< 1000); nu intră în „cel mai rapid km”.
+
 Tipuri de evenimente: `start`, `pauza`, `reluare`, `pas_inainte`, `pas_inapoi`, `prelungire_puls`, `alerta_puls`, `in_afara_tintei`, `ceas_deconectat`, `ceas_reconectat`, `bicicleta_deconectata`, `bicicleta_reconectata`, `gps_pierdut`, `gps_recuperat`, `final`.
 La spinning: `lat/lon/alt_m/precizie_m` = null, `cadenta_spm` = null; `kcal` = lucru mecanic / 4184 (ca în aplicația YESOUL), `kcal_sursa` = `"lucru_mecanic"`.
 
@@ -164,8 +177,9 @@ La spinning: `lat/lon/alt_m/precizie_m` = null, `cadenta_spm` = null; `kcal` = l
                  "fisier": "sesiuni/2026/10/<id>.json", "durata_s": 2495, "distanta_m": 3912,
                  "puls_mediu": 131, "puls_max": 158, "kcal": 310,
                  "cel_mai_lung_bloc_alergare_s": 152, "putere_medie_w": null,
-                 "analiza": "analize/<id>.md", "analizat": true } ] }
+                 "data": "2026-10-21", "analiza": "analize/<id>.md", "analizat": true, "verdict": "partial" } ] }
 ```
+Indexul e reconstruit integral de `proceseaza.py` din `sesiuni/**` (nu se editează de mână): `analizat` = există `analize/<id>.json`; `verdict` copiat din acel fișier; `analiza` = calea `.md` sau `null`.
 
 ## 5. Analiză — `rezulate/analize/<id>.json` (+ `<id>.md` pentru citit)
 
@@ -180,23 +194,49 @@ La spinning: `lat/lon/alt_m/precizie_m` = null, `cadenta_spm` = null; `kcal` = l
 
 ## 6. Progres pentru widget — `widget/progres.json` (v2)
 
-Păstrează toate câmpurile v1 (vezi fișierul curent): `atlet`, `tinta`, `progres_catre_10km`, `jaloane`, `jalon_curent`, `totaluri`, `ultima_sesiune`, `tendinte`, `consistenta`, `praguri_si_zone`, `alte_activitati`, `urmatoarea_sesiune`, `widget_hint`. Adaugă:
+Citit de widgetul „Drum spre 10 km” din Widget Studio (`app/.../run/RunData.kt`) și de ecranul Today din Train Live.
+Păstrează **toate** câmpurile v1 cu aceleași nume și sens (vezi fișierul): `generat_la`, `sursa`, `atlet`, `tinta`, `progres_catre_10km`, `jaloane`, `jalon_curent`, `luna_1`, `totaluri`, `ultima_sesiune`, `tendinte`, `consistenta`, `praguri_si_zone`, `alte_activitati`, `urmatoarea_sesiune`, `echipament`, `widget_hint`. Adaugă / extinde:
 
 ```json
 {
   "schema_version": 2,
-  "generat_de": "proceseaza.py | claude",
+  "generat_de": "proceseaza.py | claude | migrare",
   "sesiuni_aplicatie": 4,
+  "urmatoarea_sesiune": { "cod": "S1.9", "tip_activitate": "alergare", "titlu": "...", "data_planificata": "2026-10-20",
+                          "fisier_plan": "sesiuni/S1.9.json", "durata_planificata_s": 2445, "...": "câmpurile v1" },
+  "urmatoarea_sesiune_alergare":  { "cod": "S1.9",  "tip_activitate": "alergare", "titlu": "...", "data_planificata": "...", "fisier_plan": "..." },
+  "urmatoarea_sesiune_spinning":  { "cod": "SP1.1", "tip_activitate": "spinning", "titlu": "...", "data_planificata": "2026-10-21", "fisier_plan": "sesiuni/SP1.1.json" },
   "spinning": {
-    "sesiuni": 2, "timp_total_s": 4200, "distanta_totala_km": 31.2, "kcal_total": 410,
-    "ultima_sesiune": { "id": "...", "data": "2026-10-19", "durata_s": 2100, "distanta_km": 15.1,
-                        "putere_medie_w": 78, "cadenta_medie_rpm": 82, "rezistenta_medie": 31,
-                        "puls_mediu": 124, "kcal": 205 },
-    "tendinte": { "etichete_date": [], "putere_medie_w": [], "cadenta_medie_rpm": [],
-                  "rezistenta_medie": [], "kcal": [], "puls_mediu": [] }
+    "totaluri": { "sesiuni": 2, "timp_total_s": 4200, "timp_total_h": 1.17, "distanta_totala_km": 31.2, "kcal_total": 410,
+                  "echivalent_alergare_min": 33.0, "echivalent_alergare_definitie": "..." },
+    "rezistenta_z2_calibrata": 31,
+    "rezistenta_z2_definitie": "...",
+    "ultima_sesiune": { "id": "...", "data": "2026-10-19", "durata_s": 2100, "distanta_km": 15.1, "putere_medie_w": 78,
+                        "cadenta_medie_rpm": 82, "rezistenta_medie": 31, "puls_mediu": 124, "kcal": 205, "rezistenta_z2": 31 },
+    "tendinte": { "etichete_date": [], "rezistenta_z2": [], "putere_medie_w": [], "cadenta_medie_rpm": [],
+                  "rezistenta_medie": [], "kcal": [], "puls_mediu": [] },
+    "sesiuni": [ { "id": "...", "data": "2026-10-19", "plan_id": "SP1.1", "durata_s": 2100, "timp_in_miscare_s": 2080,
+                   "distanta_km": 15.1, "kcal": 205, "putere_medie_w": 78, "cadenta_medie_rpm": 82, "rezistenta_medie": 31,
+                   "puls_mediu": 124, "puls_max": 139, "rezistenta_z2": 31, "secunde_z2": 1650 } ]
   },
-  "urmatoarea_sesiune_spinning": { "cod": "SP1.1", "fisier_plan": "sesiuni/SP1.1.json",
-                                   "data_planificata": "2026-10-22", "titlu": "..." }
+  "volum_aerob_combinat": { "total_h": 7.5, "spinning_pct": 15.6, "alergare_s": 22805, "spinning_s": 4200, "definitie": "..." },
+  "widget_hint": { "...": "câmpurile v1", "culoare_spinning": "#E7B366" }
 }
 ```
+
+Definiții (scrise și în fișier, lângă valori):
+- **Echivalent bloc** = `cel_mai_lung_bloc_continuu_s × 1000 / 465` m (ritm 7:45/km). `procent_headline` = echivalent / 10 000 × 100; `procent_pe_timp` = bloc / 4650 s × 100; `distanta_ramasa_m` = 10 000 − echivalent.
+- **Jaloane**: `tinta_min` → `progres_pct` = bloc_s / (tinta_min × 60) × 100; `tinta_distanta_km` → echivalent / (km × 1000) × 100; maxim 100, `status` = `atins` la 100 (rămâne atins). L1-test 25 min, L2 40 min, L3 8 km, L4 10 km. `jalon_curent` = primul neatins.
+- **rezistenta_z2** (o sesiune de spinning) = mediana rezistenței în secundele cu puls în Z2 (117-137 la HR max 195, capete incluse) și cadență > 50 rpm; `null` dacă sunt sub 120 de astfel de secunde. **rezistenta_z2_calibrata** = mediana ultimelor 3 valori nenule; `null` = necalibrat (niciodată 0).
+- **echivalent_alergare_min** = minute de spinning cu puls în Z2 × 0,6 — estimare, afișată cu „≈”.
+- **volum_aerob_combinat**: `alergare_s` = `totaluri.timp_in_miscare_total_s`; `spinning_s` = suma `timp_in_miscare_s` din `spinning.sesiuni`; `total_h` = (alergare_s + spinning_s) / 3600; `spinning_pct` = spinning_s / total × 100.
+- `urmatoarea_sesiune` = următoarea sesiune în general (cea mai apropiată dată; la egalitate alergarea), cu `tip_activitate`. `fisier_plan` e relativ la ramura `planuri`.
+
+Fără dublă numărare (Strava + aplicație):
+- Câmpurile v1 provin din Strava (proiectul Sport). O alergare înregistrată cu Train Live poate apărea și pe Strava (Garmin a înregistrat-o în paralel). Regula: **o dată calendaristică = o alergare** în `tendinte` și `totaluri`. `proceseaza.py` adaugă o alergare din aplicație în `tendinte` (+ `totaluri`, `consistenta.saptamani`) doar dacă data ei nu e deja în `tendinte.etichete_date`.
+- `tendinte.sursa` (listă paralelă cu `etichete_date`): `"strava"` | `"aplicatie"`. Când Claude adaugă din Strava o alergare a cărei dată există deja cu sursa `aplicatie`, o înlocuiește (aceeași poziție, nu adaugă) și scade din `totaluri` valorile aplicației înainte să le adune pe cele Strava.
+- `progres_catre_10km.cel_mai_lung_bloc_continuu_s` doar crește (maximul dintre valoarea existentă și blocurile măsurate de aplicație).
+- `ultima_sesiune` se înlocuiește când rezultatul aplicației e mai nou (`"sursa": "aplicatie"`, `rezultat_id`, `strava_id: null`, `relative_effort: null`).
+- Spinningul vine doar din aplicație (`alte_activitati` rămâne pentru ture de bicicletă Strava).
+
 `zile_de_la_ultima_alergare` se recalculează de cititor din `ultima_sesiune.data` (valoarea din fișier e doar la momentul generării).
