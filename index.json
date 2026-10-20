@@ -1,0 +1,31 @@
+{
+  "schema": "trainlive.planuri",
+  "schema_version": 1,
+  "actualizat_la": "2026-10-20T11:00:00+03:00",
+  "urmatoarea": {
+    "alergare": "S1.9",
+    "spinning": "SP1.1"
+  },
+  "sesiuni": [
+    {
+      "id": "S1.9",
+      "activitate": "alergare",
+      "data": "2026-10-20",
+      "titlu": "Proba + 4×(2'30 alergat / 3' mers)",
+      "fisier": "sesiuni/S1.9.json",
+      "status": "planificat",
+      "rezultat_id": null,
+      "durata_s": 2445
+    },
+    {
+      "id": "SP1.1",
+      "activitate": "spinning",
+      "data": "2026-10-21",
+      "titlu": "Spinning zona 2 · 3×8' la 80-90 rpm",
+      "fisier": "sesiuni/SP1.1.json",
+      "status": "planificat",
+      "rezultat_id": null,
+      "durata_s": 2400
+    }
+  ]
+}
