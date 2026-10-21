@@ -1,7 +1,7 @@
 {
   "schema": "trainlive.rezultate",
   "schema_version": 1,
-  "actualizat_la": "2026-10-20T19:13:46+03:00",
+  "actualizat_la": "2026-10-21T07:16:43+03:00",
   "sesiuni": [
     {
       "id": "2026-10-20T18-10-51_alergare",
@@ -17,9 +17,9 @@
       "kcal": 504,
       "cel_mai_lung_bloc_alergare_s": 112,
       "putere_medie_w": null,
-      "analiza": null,
-      "analizat": false,
-      "verdict": null
+      "analiza": "analize/2026-10-20T18-10-51_alergare.md",
+      "analizat": true,
+      "verdict": "partial"
     }
   ]
 }

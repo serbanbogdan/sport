@@ -1,0 +1,48 @@
+{
+  "schema": "trainlive.analiza",
+  "schema_version": 1,
+  "id": "2026-10-20T18-10-51_alergare",
+  "creat_la": "2026-10-21T07:00:00+03:00",
+  "verdict": "partial",
+  "titlu": "4 din 4 blocuri de 150 s duse la capăt cu reluare sub 130, dar vârfuri de puls 155-162 în toate blocurile.",
+  "praguri": [
+    {
+      "nume": "Vârf sub 155 în blocuri",
+      "rezultat": "0 din 4 (155, 158, 157, 162)",
+      "ok": false
+    },
+    {
+      "nume": "Reluare sub 130",
+      "rezultat": "4 din 4 (104, 119, 125, 128)",
+      "ok": true
+    },
+    {
+      "nume": "Cadență 165-170 spm",
+      "rezultat": "131-132 spm în toate blocurile",
+      "ok": false
+    },
+    {
+      "nume": "Z1+Z2 peste 85 %",
+      "rezultat": "69,5 %",
+      "ok": false
+    }
+  ],
+  "puncte_bune": [
+    "4 din 4 blocuri de 150 s complete, bloc continuu 145→150 s",
+    "Reluare sub 130 în toate blocurile",
+    "Ritm 7:45-8:02/km, niciodată sub 7:15",
+    "Fără durere"
+  ],
+  "probleme": [
+    "Vârf 155-162 în toate cele 4 blocuri, puls încă în urcare la final",
+    "Reluare în creștere 104→119→125→128",
+    "Cadență 131 spm, ținta 165-170",
+    "Z1+Z2 69,5 %, 232 s peste 155"
+  ],
+  "sesiunea_urmatoare": {
+    "id": "S1.10",
+    "fisier": "sesiuni/S1.10.json",
+    "motiv": "Partial: repetăm structura cu o singură corecție, blocuri de 120 s în loc de 150 s, ca vârful să rămână sub 155."
+  },
+  "progres_headline_pct": 3.2
+}
