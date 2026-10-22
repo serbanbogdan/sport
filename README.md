@@ -6,7 +6,7 @@ zile lucrătoare, dietă pentru hipertensiune). Aplicația citește de aici făr
 | Fișier | Ce conține | Cine scrie |
 |---|---|---|
 | `meniuri/AAAA-LL-ZZ.json` | meniul unei săptămâni; numele = data de **luni** a săptămânii | Claude, prin skill-ul `/nutritie` |
-| `setari.json` | `excluse`: mâncăruri și alimente pe care nu le vrea | aplicația (Setări) sau Claude, când Bogdan cere |
+| `setari.json` | `excluse`: mâncăruri și alimente pe care nu le vrea; `favorite`: mese care i-au plăcut (inimă în aplicație), repetate mai des | aplicația (Setări) sau Claude, când Bogdan cere |
 | `valideaza.py` | verifică un meniu (schemă, 5 zile, sodiu, excluse) | manual / Claude înainte de push |
 
 Aplicația ia automat săptămâna trecută, cea curentă și următoarele două. Sâmbătă și duminică afișează săptămâna următoare.
@@ -43,7 +43,7 @@ Aplicația ia automat săptămâna trecută, cea curentă și următoarele două
 ## Schema `nutritie.setari` v1
 
 ```json
-{"schema": "nutritie.setari", "v": 1, "actualizat": "2026-10-22T21:30:00+03:00", "excluse": ["ficat", "varză murată"]}
+{"schema": "nutritie.setari", "v": 1, "actualizat": "2026-10-22T21:30:00+03:00", "excluse": ["ficat", "varză murată"], "favorite": ["Terci de ovăz cu măr și scorțișoară"]}
 ```
 
 ## Validare

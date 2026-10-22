@@ -69,6 +69,10 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .meal .tag{font-size:12px;font-weight:700;letter-spacing:.3px}
 .meal .nm{font-size:16px;font-weight:600;margin:2px 0 4px}
 .meal .ing{font-size:14px;color:var(--text2);line-height:1.45}
+.heart{width:36px;height:36px;display:grid;place-items:center;flex:none;color:var(--text3);transition:color .25s}
+.heart svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round}
+.heart.on{color:var(--red)}.heart.on svg{fill:currentColor;animation:beat .45s}
+@keyframes beat{0%{transform:scale(.6)}60%{transform:scale(1.3)}100%{transform:scale(1)}}
 .chev{margin-left:auto;color:var(--text3);transition:transform .3s}
 .meal.open .chev{transform:rotate(180deg)}
 .det{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
@@ -135,7 +139,7 @@ const addDays=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
 const fmt=d=>d.toLocaleDateString("ro-RO",{day:"numeric",month:"short"});
 
 /* ---------- state ---------- */
-const S={tab:"meniu",monday:mondayOf(new Date()),day:0,open:{},data:null,loading:false,err:"",excluse:ls.get("excluse",[]),dirty:ls.get("dirty",false)};
+const S={tab:"meniu",monday:mondayOf(new Date()),day:0,open:{},data:null,loading:false,err:"",excluse:ls.get("excluse",[]),fav:ls.get("fav",[]),dirty:ls.get("dirty",false)};
 const cfg=()=>Object.assign({},DEF,ls.get("gh",{}),{token:ls.get("token","")});
 const raw=p=>{const c=cfg();return `https://raw.githubusercontent.com/${c.owner}/${c.repo}/${c.branch}/${p}`};
 const wkKey=()=>iso(S.monday);
@@ -152,7 +156,7 @@ async function load(force){
     if(r.status===404){S.data=null;ls.set(k,null);if(force)toast("Nu există meniu pentru săptămâna aceasta.")}
     else if(!r.ok)throw new Error("HTTP "+r.status);
     else{S.data=await r.json();ls.set(k,S.data)}
-    if(!S.dirty){try{const s=await fetch(raw("setari.json")+"?t="+Date.now(),{cache:"no-store"});if(s.ok){const j=await s.json();if(Array.isArray(j.excluse)){S.excluse=j.excluse;ls.set("excluse",S.excluse)}}}catch(e){}}
+    if(!S.dirty){try{const s=await fetch(raw("setari.json")+"?t="+Date.now(),{cache:"no-store"});if(s.ok){const j=await s.json();if(Array.isArray(j.excluse)){S.excluse=j.excluse;ls.set("excluse",S.excluse)}if(Array.isArray(j.favorite)){S.fav=j.favorite;ls.set("fav",S.fav)}}}catch(e){}}
     else pushExcluse();
     ls.set("last",Date.now());
   }catch(e){S.err=cached||S.data?"Offline — afișez ultima variantă salvată.":"Nu pot citi meniul ("+e.message+").";if(cached)S.data=cached}
@@ -165,13 +169,15 @@ async function pushExcluse(){
   const h={Authorization:"Bearer "+c.token,Accept:"application/vnd.github+json"};
   try{
     let sha;const g=await fetch(api+"?ref="+encodeURIComponent(c.branch),{headers:h});if(g.ok)sha=(await g.json()).sha;
-    const body={message:"Nutritie: lista de mâncăruri excluse",branch:c.branch,content:b64(JSON.stringify({schema:"nutritie.setari",v:1,actualizat:new Date().toISOString(),excluse:S.excluse},null,2)+"\n")};
+    const body={message:"Nutritie: lista de mâncăruri excluse",branch:c.branch,content:b64(JSON.stringify({schema:"nutritie.setari",v:1,actualizat:new Date().toISOString(),excluse:S.excluse,favorite:S.fav},null,2)+"\n")};
     if(sha)body.sha=sha;
     const r=await fetch(api,{method:"PUT",headers:h,body:JSON.stringify(body)});
     if(!r.ok)throw new Error("HTTP "+r.status);
     S.dirty=false;ls.set("dirty",false);return true;
   }catch(e){toast("Nu am putut salva pe GitHub: "+e.message);return false}
 }
+const isFav=n=>S.fav.some(x=>x.toLowerCase()===String(n).toLowerCase());
+function toggleFav(n){const on=!isFav(n);S.fav=on?[...S.fav,n]:S.fav.filter(x=>x.toLowerCase()!==n.toLowerCase());ls.set("fav",S.fav);S.dirty=true;ls.set("dirty",true);pushExcluse().then(()=>render());toast(on?"Adăugat la favorite ♥":"Scos din favorite");return on}
 function setExcluse(list){S.excluse=list;S.dirty=true;ls.set("excluse",list);ls.set("dirty",true);pushExcluse().then(()=>render())}
 
 /* ---------- ajutoare ---------- */
@@ -228,7 +234,7 @@ function meal(m,meta,id,i){
   const o=S.open[id],prep=(m.pregatire||"").trim(),ings=m.ingrediente||[];
   const det=prep?`<h4>MOD DE PREPARARE</h4><p>${esc(prep)}</p>`:`<h4>INGREDIENTE</h4><ul>${ings.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`;
   const frac=Math.min(1,(m.kcal||0)/(meta[0]==="pranz"?520:meta[0]==="mic_dejun"?350:150));
-  return `<div class="card meal pop ${o?"open":""} ${meta[0].startsWith("gustare")?"small":""}" data-open="${id}" style="animation-delay:${.1+i*.07}s"><div class="top">${ring(62,6,frac,meta[2],`<div style="font-weight:700;font-size:15px">${m.kcal??"–"}</div><div style="font-size:9px;color:var(--text3)">kcal</div>`)}<div style="flex:1;min-width:0"><div class="tag" style="color:${meta[2]}">${meta[1]}</div><div class="nm">${esc(m.nume)}</div><div class="ing">${o?esc(m.portie||""):esc(ings.join(" · "))}</div></div><span class="chev">${IC.chev}</span></div><div class="det"><div><div class="in">${det}${prep&&ings.length?`<h4 style="margin-top:12px">INGREDIENTE</h4><div class="ing">${esc(ings.join(" · "))}</div>`:""}<div class="meta"><span>🔥 ${m.kcal??"–"} kcal</span><span>🧂 ${m.sodiu_mg??"–"} mg sodiu</span>${m.portie?`<span>${esc(m.portie)}</span>`:""}</div>${m.nota?`<div class="nota">${esc(m.nota)}</div>`:""}<button class="link" data-ban="${esc(m.nume)}">Nu mai vreau asta</button></div></div></div></div>`;
+  return `<div class="card meal pop ${o?"open":""} ${meta[0].startsWith("gustare")?"small":""}" data-open="${id}" style="animation-delay:${.1+i*.07}s"><div class="top">${ring(62,6,frac,meta[2],`<div style="font-weight:700;font-size:15px">${m.kcal??"–"}</div><div style="font-size:9px;color:var(--text3)">kcal</div>`)}<div style="flex:1;min-width:0"><div class="tag" style="color:${meta[2]}">${meta[1]}</div><div class="nm">${esc(m.nume)}</div><div class="ing">${o?esc(m.portie||""):esc(ings.join(" · "))}</div></div><button class="heart ${isFav(m.nume)?"on":""}" data-like="${esc(m.nume)}" aria-label="Îmi place"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9-9.5C2 7.6 4 5 6.8 5c1.9 0 3.4 1 5.2 3 1.8-2 3.3-3 5.2-3C20 5 22 7.6 21 11c-1.5 4.9-9 9.5-9 9.5z"/></svg></button><span class="chev">${IC.chev}</span></div><div class="det"><div><div class="in">${det}${prep&&ings.length?`<h4 style="margin-top:12px">INGREDIENTE</h4><div class="ing">${esc(ings.join(" · "))}</div>`:""}<div class="meta"><span>🔥 ${m.kcal??"–"} kcal</span><span>🧂 ${m.sodiu_mg??"–"} mg sodiu</span>${m.portie?`<span>${esc(m.portie)}</span>`:""}</div>${m.nota?`<div class="nota">${esc(m.nota)}</div>`:""}<button class="link" data-ban="${esc(m.nume)}">Nu mai vreau asta</button></div></div></div></div>`;
 }
 
 const order=k=>({lidl:0,kaufland:1}[k.toLowerCase()]??2);
@@ -263,6 +269,8 @@ function viewSet(){
   <div class="card pop"><div class="row" style="gap:8px"><input type="text" id="ex" placeholder="ex: ficat, pește, conopidă" style="margin:0"><button class="btn press" data-act="addex">Adaugă</button></div>
   <div style="margin-top:10px">${S.excluse.length?S.excluse.map((x,i)=>`<span class="chip">${esc(x)}<b class="press" data-rm="${i}">×</b></span>`).join(""):'<span class="empty">Lista e goală.</span>'}</div>
   ${S.dirty?`<div class="sub" style="margin-top:10px;color:var(--orange)">${c.token?"Se trimite pe GitHub…":"Salvat doar pe acest telefon — adaugă tokenul ca să ajungă și la Claude."}</div>`:""}</div>
+  <h1 style="margin-top:22px;font-size:22px">Meniuri favorite ♥</h1><div class="sub">Apasă inima de lângă o masă. /nutritie le repetă mai des.</div>
+  <div class="card pop" style="animation-delay:.04s">${S.fav.length?S.fav.map((x,i)=>`<span class="chip">${esc(x)}<b class="press" data-unfav="${i}">×</b></span>`).join(""):'<span class="empty">Nicio masă favorită încă.</span>'}</div>
   <div class="card pop" style="animation-delay:.08s"><b>GitHub</b><div class="sub">Meniurile se citesc fără token. Tokenul e necesar doar ca lista de excluse să ajungă la Claude.</div>
   <label>Utilizator</label><input type="text" id="g_o" value="${esc(c.owner)}" autocapitalize="off">
   <label>Repository</label><input type="text" id="g_r" value="${esc(c.repo)}" autocapitalize="off">
@@ -284,10 +292,12 @@ function setTheme(t){if(t)document.documentElement.dataset.theme=t;else delete d
 setTheme(ls.get("theme",""));
 
 document.addEventListener("click",async ev=>{
-  const t=ev.target.closest("[data-tab],[data-day],[data-open],[data-act],[data-chk],[data-ban],[data-rm]");if(!t)return;
+  const t=ev.target.closest("[data-tab],[data-day],[data-open],[data-act],[data-chk],[data-ban],[data-rm],[data-like],[data-unfav]");if(!t)return;
   const d=t.dataset;
   if(d.tab){S.tab=d.tab;window.scrollTo(0,0);if(d.tab==="cump"&&!S.data)load();return render()}
   if(d.day!=null){S.day=+d.day;return render()}
+  if(d.like){ev.stopPropagation();toggleFav(d.like);return render()}
+  if(d.unfav!=null){S.fav=S.fav.filter((x,i)=>i!==+d.unfav);ls.set("fav",S.fav);S.dirty=true;ls.set("dirty",true);pushExcluse().then(()=>render());return render()}
   if(d.ban){ev.stopPropagation();const n=d.ban;if(!S.excluse.some(x=>x.toLowerCase()===n.toLowerCase()))setExcluse([...S.excluse,n]);toast("„"+n+"” a intrat în lista de excluse. Cere-i lui Claude să refacă masa.");return render()}
   if(d.open){S.open[d.open]=!S.open[d.open];const el=t;el.classList.toggle("open",!!S.open[d.open]);
     const ing=el.querySelector(".top .ing");return}

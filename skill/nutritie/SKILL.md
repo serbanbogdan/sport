@@ -1,6 +1,6 @@
 ---
 name: nutritie
-description: Pregătește meniul săptămânii viitoare (luni–vineri: mic dejun acasă, prânz la serviciu, 2 gustări, ceai la termos) pentru Bogdan, care este hipertensiv, pe baza alimentelor pe care le are acasă, evitând mâncărurile din lista de excluse, și îl publică pe GitHub pentru aplicația Nutriție. Folosește OBLIGATORIU acest skill ori de câte ori mesajul începe cu "/nutritie" — fără excepție — sau când Bogdan cere să refaci unele mese din meniu sau să adaugi/ștergi mâncăruri din lista de excluse.
+description: Pregătește meniul săptămânii viitoare (luni–vineri: mic dejun acasă, prânz la serviciu, 2 gustări, ceai la termos) pentru Bogdan, care este hipertensiv, pe baza alimentelor pe care le are acasă, evitând mâncărurile din lista de excluse și repetând mai des favoritele, și îl publică pe GitHub pentru aplicația Nutriție. Folosește OBLIGATORIU acest skill ori de câte ori mesajul începe cu "/nutritie" — fără excepție — sau când Bogdan cere să refaci unele mese din meniu sau să adaugi/ștergi mâncăruri din lista de excluse.
 ---
 
 # /nutritie — meniul săptămânii pentru Bogdan
@@ -13,7 +13,7 @@ Textul de după `/nutritie` = alimentele pe care Bogdan le are acasă (text libe
 ## Pași
 1. **Săptămâna țintă.** Ia data de azi cu `current_time`. Implicit = luni din săptămâna următoare (de sâmbătă/duminică: lunea care urmează; de luni până vineri: lunea de după). Săptămâna începe luni. Respectă „săptămâna aceasta” sau o dată dată explicit.
 2. **Depozitul.** Dacă `serbanbogdan/sport` nu e în sesiune, atașează-l cu `add_repo` (access „push”), apoi `git clone --depth 1 --branch nutritie https://github.com/serbanbogdan/sport /home/claude/sport-nutritie` (o singură clonare, timeout mare). Lucrezi doar pe ramura `nutritie`; nu atingi alte ramuri. Dacă nu ai unelte git: generează fișierul, dă-l lui Bogdan (`SendUserFile`) și spune-i să-l pună în `meniuri/` pe ramura `nutritie`.
-3. **Citește**: `setari.json` (`excluse`), meniul existent `meniuri/<luni>.json` dacă e o refacere și cele 2 meniuri anterioare (ca să nu repeți aceleași feluri).
+3. **Citește**: `setari.json` (`excluse` și `favorite`), meniul existent `meniuri/<luni>.json` dacă e o refacere și cele 2 meniuri anterioare (ca să nu repeți aceleași feluri).
 4. **Compune meniul** după regulile de mai jos.
 5. **Validează**: `python3 valideaza.py meniuri/<luni>.json --setari setari.json`. Repară toate erorile și, unde se poate, avertismentele; repetă până la „0 erori”.
 6. **Publică**: `git add`, commit (`Meniu <luni>`), `git pull --rebase origin nutritie` dacă e nevoie, `git push origin nutritie`. Fără tokenuri în fișiere sau în mesaje.
@@ -29,6 +29,7 @@ La „refă marți prânz” (sau mai multe): modifici DOAR acele mese în fiși
 - **Preferă**: legume (cel puțin 2 porții la masă), fructe, leguminoase, cereale integrale, pește gras proaspăt sau congelat simplu de 2 ori pe săptămână (somon, macrou, sardine proaspete), pui sau curcan fără piele, ouă (maxim 4–5 pe săptămână), iaurt/chefir/lapte 1,5% simple, nuci și semințe nesărate (15–30 g), ulei de măsline, alimente bogate în potasiu și magneziu (banane, cartof dulce, spanac, avocado, roșii, fasole, linte). Carne roșie slabă maxim o dată pe săptămână. Nu prăji; coace, fierbe, înăbușă, gătește la tigaie cu puțin ulei.
 - **Calorii orientative** (cina e în afara aplicației): mic dejun 250–350, prânz 400–520, gustare 70–150 kcal (cel mult ≈ 60 mg sodiu), total 4 mese ≈ 1000–1300 kcal/zi. Zahăr adăugat minim.
 - **Estimări de sodiu** (mg): ou 70 · felie pâine integrală 30 g 120–150 · iaurt 125 g 60 · lapte 150 ml 60 · pui crud 100 g 70 · somon 100 g 60 · ovăz 40 g 5 · linte/fasole fiartă fără sare 100 g 5 · avocado 40 g 3 · spanac 50 g 40 · morcov 40 · pastă de roșii fără sare 1 lingură 15 · paste/orez fierte fără sare 80 g 5. Dacă un produs poartă sare (pâine, pastă, conserve), spune în `nota` să citească eticheta (sub 0,3 g sare la 100 g).
+- **Favorite** (`favorite` din `setari.json`, mese cu inimă în aplicație): includ în fiecare săptămână 3–5 dintre ele (de preferat 1–2 la prânz și 1–2 la micul dejun), cu numele exact sau cu variații mici, dar niciodată aceeași masă de 2 ori în aceeași săptămână. Un favorit care încalcă regulile de sodiu sau `excluse` se adaptează (fără sare, ingrediente înlocuite) sau se sare. Restul meniului rămâne variat.
 - **Varietate**: niciun prânz repetat în aceeași săptămână; nu repeta feluri din ultimele 2 săptămâni. Folosește cât mai mult alimentele din casă (fără să le forțezi), apoi completează cu produse ușor de găsit la **Lidl** sau **Kaufland** în România (disponibilitatea diferă: pune magazinul cel mai probabil; condimentele și uleiul de acasă, la „Acasă”).
 - **Gustări** (2/zi: dimineață și după-amiază): fructe, iaurt, chefir, morcov sau ardei crud, nuci nesărate, prune uscate; mici.
 - **Ceai la termos** (1 litru, zilnic, fără zahăr, cu `cum` = rețeta și `de_ce` = rostul): rotește tei, mentă, mușețel, rooibos, măceșe, melisă, ceai verde (slab, doar până la prânz, are cafeină). Hibiscus (scade ușor tensiunea): maxim 2–3 zile pe săptămână, cu avertismentul „întreabă medicul dacă iei tratament pentru tensiune sau ai tensiunea mică”. **Niciodată** lemn-dulce (licorice), ginseng, efedră, guarană, ceaiuri „energizante” sau „de slăbit”.
@@ -39,5 +40,5 @@ La „refă marți prânz” (sau mai multe): modifici DOAR acele mese în fiși
 Exact ca în `README.md` din ramură: `schema`="nutritie.meniu", `v`=1, `saptamana` (luni), `creat` (ISO cu fus +02:00/+03:00), `sursa`="claude", `alimente_acasa` (lista primită), `note` (1–2 propoziții despre săptămână), `zile` (exact 5, luni–vineri) cu `mic_dejun`, `gustare_dimineata`, `pranz`, `gustare_dupamasa` (fiecare: `nume`, `ingrediente` cu gramaje, `portie`, `kcal`, `sodiu_mg`, `pregatire`, `nota`) și `ceai` (`nume`, `cum`, `de_ce`); `cumparaturi` (`produs`, `cantitate`, `magazin`: Lidl | Kaufland | Acasă; doar ce NU are deja în casă) și `sfaturi` (3–5 propoziții scurte). JSON valid UTF-8, diacritice corecte.
 
 ## Alte cereri legate
-- „Adaugă X la excluse” / „scoate X din excluse”: modifici `setari.json` și publici.
+- „Adaugă X la excluse” / „scoate X din excluse” / „adaugă X la favorite” / „scoate X din favorite”: modifici `setari.json` (`excluse` sau `favorite`, fără să ștergi restul) și publici.
 - „Ce am în meniu marți?”: citești fișierul și răspunzi, fără commit.
