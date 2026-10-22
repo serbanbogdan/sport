@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generat_la": "2026-10-21T07:16:59+03:00",
-  "generat_de": "claude",
-  "sesiuni_aplicatie": 1,
+  "generat_la": "2026-10-22T06:22:59+03:00",
+  "generat_de": "proceseaza.py",
+  "sesiuni_aplicatie": 2,
   "sursa": {
     "strava_athlete_id": 28920338,
     "ultima_activitate_strava_id": "20621071322",
@@ -569,33 +569,75 @@
   },
   "spinning": {
     "totaluri": {
-      "sesiuni": 0,
-      "timp_total_s": 0,
-      "timp_total_h": 0.0,
-      "distanta_totala_km": 0.0,
-      "kcal_total": 0,
-      "echivalent_alergare_min": 0.0,
+      "sesiuni": 1,
+      "timp_total_s": 1802,
+      "timp_total_h": 0.5,
+      "distanta_totala_km": 14.1,
+      "kcal_total": 35,
+      "echivalent_alergare_min": 2.1,
       "echivalent_alergare_definitie": "echivalent_alergare_min = minute de spinning cu puls in Z2 × 0,6 (estimare, nu masuratoare)"
     },
-    "rezistenta_z2_calibrata": null,
+    "rezistenta_z2_calibrata": 43,
     "rezistenta_z2_definitie": "rezistenta_z2 a unei sesiuni = mediana rezistentei in secundele cu puls in Z2 (inclusiv capetele) si cadenta > 50 rpm; null daca sunt sub 120 de astfel de secunde. rezistenta_z2_calibrata = mediana ultimelor 3 valori nenule (null = necalibrat, niciodata 0)",
-    "ultima_sesiune": null,
-    "tendinte": {
-      "etichete_date": [],
-      "rezistenta_z2": [],
-      "putere_medie_w": [],
-      "cadenta_medie_rpm": [],
-      "rezistenta_medie": [],
-      "kcal": [],
-      "puls_mediu": []
+    "ultima_sesiune": {
+      "id": "2026-10-22T05-52-45_spinning",
+      "data": "2026-10-22",
+      "durata_s": 1802,
+      "distanta_km": 14.1,
+      "putere_medie_w": 81,
+      "cadenta_medie_rpm": 73,
+      "rezistenta_medie": 32,
+      "puls_mediu": 104,
+      "kcal": 35,
+      "rezistenta_z2": 43
     },
-    "sesiuni": []
+    "tendinte": {
+      "etichete_date": [
+        "2026-10-22"
+      ],
+      "rezistenta_z2": [
+        43
+      ],
+      "putere_medie_w": [
+        81
+      ],
+      "cadenta_medie_rpm": [
+        73
+      ],
+      "rezistenta_medie": [
+        32
+      ],
+      "kcal": [
+        35
+      ],
+      "puls_mediu": [
+        104
+      ]
+    },
+    "sesiuni": [
+      {
+        "id": "2026-10-22T05-52-45_spinning",
+        "data": "2026-10-22",
+        "plan_id": null,
+        "durata_s": 1802,
+        "timp_in_miscare_s": 1802,
+        "distanta_km": 14.1,
+        "kcal": 35,
+        "putere_medie_w": 81,
+        "cadenta_medie_rpm": 73,
+        "rezistenta_medie": 32,
+        "puls_mediu": 104,
+        "puls_max": 126,
+        "rezistenta_z2": 43,
+        "secunde_z2": 206
+      }
+    ]
   },
   "volum_aerob_combinat": {
-    "total_h": 7.01,
-    "spinning_pct": 0.0,
+    "total_h": 7.51,
+    "spinning_pct": 6.7,
     "alergare_s": 25223,
-    "spinning_s": 0,
+    "spinning_s": 1802,
     "definitie": "alergare_s = totaluri.timp_in_miscare_total_s; spinning_s = suma timp_in_miscare_s din spinning.sesiuni; total_h = (alergare_s + spinning_s) / 3600; spinning_pct = spinning_s / total × 100"
   }
 }
