@@ -1,7 +1,7 @@
 {
   "schema": "trainlive.planuri",
   "schema_version": 1,
-  "actualizat_la": "2026-10-21T07:00:00+03:00",
+  "actualizat_la": "2026-10-22T08:00:00+03:00",
   "urmatoarea": {
     "alergare": "S1.10",
     "spinning": "SP1.1"
@@ -36,6 +36,66 @@
       "status": "planificat",
       "rezultat_id": null,
       "durata_s": 2325
+    },
+    {
+      "id": "SP1.2",
+      "activitate": "spinning",
+      "data": "2026-10-23",
+      "titlu": "Spinning dimineata · 3×6' zona 2 · 30 min",
+      "fisier": "sesiuni/SP1.2.json",
+      "status": "planificat",
+      "rezultat_id": null,
+      "durata_s": 1800
+    },
+    {
+      "id": "SP1.3",
+      "activitate": "spinning",
+      "data": "2026-10-26",
+      "titlu": "Spinning dimineata · 3×6' zona 2 · 30 min",
+      "fisier": "sesiuni/SP1.3.json",
+      "status": "planificat",
+      "rezultat_id": null,
+      "durata_s": 1800
+    },
+    {
+      "id": "SP1.4",
+      "activitate": "spinning",
+      "data": "2026-10-27",
+      "titlu": "Spinning dimineata · 3×6' zona 2 · 30 min",
+      "fisier": "sesiuni/SP1.4.json",
+      "status": "planificat",
+      "rezultat_id": null,
+      "durata_s": 1800
+    },
+    {
+      "id": "SP1.5",
+      "activitate": "spinning",
+      "data": "2026-10-28",
+      "titlu": "Spinning dimineata · 3×6' zona 2 · 30 min",
+      "fisier": "sesiuni/SP1.5.json",
+      "status": "planificat",
+      "rezultat_id": null,
+      "durata_s": 1800
+    },
+    {
+      "id": "SP1.6",
+      "activitate": "spinning",
+      "data": "2026-10-29",
+      "titlu": "Spinning dimineata · 3×6' zona 2 · 30 min",
+      "fisier": "sesiuni/SP1.6.json",
+      "status": "planificat",
+      "rezultat_id": null,
+      "durata_s": 1800
+    },
+    {
+      "id": "SP1.7",
+      "activitate": "spinning",
+      "data": "2026-10-30",
+      "titlu": "Spinning dimineata · 3×6' zona 2 · 30 min",
+      "fisier": "sesiuni/SP1.7.json",
+      "status": "planificat",
+      "rezultat_id": null,
+      "durata_s": 1800
     }
   ]
 }
