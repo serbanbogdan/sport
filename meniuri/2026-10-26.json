@@ -1,0 +1,528 @@
+{
+  "schema": "nutritie.meniu",
+  "v": 1,
+  "saptamana": "2026-10-26",
+  "creat": "2026-10-22T21:30:00+03:00",
+  "sursa": "claude",
+  "alimente_acasa": [],
+  "note": "Meniu de pornire pentru 26–30 octombrie, făcut fără lista alimentelor tale din casă. Porții mici, sare foarte puțină (ținta zilnică ≈ 2000 mg sodiu, aici masele de la serviciu și de acasă stau sub ≈ 800 mg). Se înlocuiește când rulezi /nutritie.",
+  "zile": [
+    {
+      "data": "2026-10-26",
+      "zi": "Luni",
+      "mic_dejun": {
+        "nume": "Terci de ovăz cu măr și scorțișoară",
+        "ingrediente": [
+          "ovăz 40 g",
+          "lapte 1,5% 150 ml",
+          "jumătate de măr ras",
+          "scorțișoară",
+          "nuci 10 g"
+        ],
+        "portie": "1 castron mic",
+        "kcal": 320,
+        "sodiu_mg": 60,
+        "pregatire": "Fierbi ovăzul în lapte 5 minute, adaugi mărul ras și scorțișoara, presari nucile. Fără sare și fără zahăr.",
+        "nota": "Fibrele din ovăz ajută și la colesterol."
+      },
+      "gustare_dimineata": {
+        "nume": "Măr și migdale",
+        "ingrediente": [
+          "1 măr mic",
+          "6 migdale nesărate"
+        ],
+        "portie": "1 măr + 6 migdale",
+        "kcal": 120,
+        "sodiu_mg": 3
+      },
+      "pranz": {
+        "nume": "Piept de pui la cuptor cu orez integral și broccoli",
+        "ingrediente": [
+          "piept de pui 100 g",
+          "orez integral fiert 80 g",
+          "broccoli 100 g",
+          "morcov ras 50 g",
+          "ulei de măsline 1 linguriță",
+          "lămâie",
+          "usturoi",
+          "boia dulce"
+        ],
+        "portie": "1 caserolă mică",
+        "kcal": 470,
+        "sodiu_mg": 120,
+        "pregatire": "Pui marinat în lămâie, usturoi și boia, la cuptor 20 min. Broccoli la aburi. Fără sare; după gust, ierburi proaspete.",
+        "nota": "Se poate mânca și rece, la serviciu."
+      },
+      "gustare_dupamasa": {
+        "nume": "Iaurt natural",
+        "ingrediente": [
+          "iaurt natural 125 g"
+        ],
+        "portie": "1 pahar mic",
+        "kcal": 80,
+        "sodiu_mg": 60
+      },
+      "ceai": {
+        "nume": "Hibiscus cu măceșe",
+        "cum": "2 linguri de hibiscus uscat + 1 lingură de măceșe, 1 litru apă fierbinte, infuzie 8 minute, strecori în termos. Fără zahăr, cu felii de lămâie.",
+        "de_ce": "Studiile arată o scădere modestă a tensiunii. Dacă iei medicamente pentru tensiune (mai ales diuretice) sau ai tensiunea mică, întreabă medicul înainte să-l bei zilnic."
+      }
+    },
+    {
+      "data": "2026-10-27",
+      "zi": "Marți",
+      "mic_dejun": {
+        "nume": "Omletă cu spanac și roșii",
+        "ingrediente": [
+          "2 ouă",
+          "spanac 50 g",
+          "o roșie mică",
+          "1 felie de pâine integrală 30 g",
+          "ulei de măsline 1 linguriță",
+          "piper"
+        ],
+        "portie": "1 farfurie mică",
+        "kcal": 300,
+        "sodiu_mg": 280,
+        "pregatire": "Omleta se face fără sare, cu piper și busuioc. Felia de pâine o poți prăji ușor.",
+        "nota": "Pâinea e principala sursă de sare la această masă: o singură felie."
+      },
+      "gustare_dimineata": {
+        "nume": "Banană mică",
+        "ingrediente": [
+          "1 banană mică"
+        ],
+        "portie": "1 banană",
+        "kcal": 90,
+        "sodiu_mg": 1,
+        "nota": "Bogată în potasiu, ajută la echilibrul sodiului."
+      },
+      "pranz": {
+        "nume": "Salată caldă de linte cu ou",
+        "ingrediente": [
+          "linte fiartă 120 g",
+          "ardei gras copt 80 g",
+          "roșii cherry 80 g",
+          "ceapă verde",
+          "pătrunjel",
+          "ulei de măsline 1 linguriță",
+          "oțet de mere",
+          "1 ou fiert"
+        ],
+        "portie": "1 caserolă mică",
+        "kcal": 430,
+        "sodiu_mg": 100,
+        "pregatire": "Lintea se fierbe acasă, fără sare. Amesteci cu legumele, uleiul, oțetul și pătrunjelul; oul fiert deasupra.",
+        "nota": "Se mănâncă bine la temperatura camerei, nu necesită încălzire."
+      },
+      "gustare_dupamasa": {
+        "nume": "Morcov și nuci",
+        "ingrediente": [
+          "1 morcov mare",
+          "nuci 15 g"
+        ],
+        "portie": "1 morcov + 15 g nuci",
+        "kcal": 120,
+        "sodiu_mg": 40
+      },
+      "ceai": {
+        "nume": "Tei cu mentă",
+        "cum": "2 linguri de flori de tei + 1 lingură de mentă uscată, 1 litru apă fierbinte, 7 minute. Fără zahăr.",
+        "de_ce": "Fără cafeină, relaxant; potrivit pentru zilele cu stres."
+      }
+    },
+    {
+      "data": "2026-10-28",
+      "zi": "Miercuri",
+      "mic_dejun": {
+        "nume": "Iaurt cu ovăz și fructe de pădure",
+        "ingrediente": [
+          "iaurt natural 150 g",
+          "fulgi de ovăz 30 g",
+          "fructe de pădure congelate 80 g",
+          "semințe de dovleac 10 g"
+        ],
+        "portie": "1 bol mic",
+        "kcal": 300,
+        "sodiu_mg": 80,
+        "pregatire": "Fructele se scot din congelator seara, ca să se dezghețe în frigider."
+      },
+      "gustare_dimineata": {
+        "nume": "Pară",
+        "ingrediente": [
+          "1 pară medie"
+        ],
+        "portie": "1 pară",
+        "kcal": 90,
+        "sodiu_mg": 2
+      },
+      "pranz": {
+        "nume": "Somon la cuptor cu cartof dulce și fasole verde",
+        "ingrediente": [
+          "somon 90 g",
+          "cartof dulce 120 g",
+          "fasole verde 100 g",
+          "lămâie",
+          "mărar",
+          "ulei de măsline 1 linguriță"
+        ],
+        "portie": "1 caserolă mică",
+        "kcal": 470,
+        "sodiu_mg": 130,
+        "pregatire": "Somonul și cartoful dulce la cuptor 20 min cu lămâie și mărar; fasolea verde fiartă 5 min. Fără sare.",
+        "nota": "Peștele gras (somon) aduce omega-3, bun pentru inimă și tensiune. Alege somon proaspăt sau congelat simplu, nu afumat."
+      },
+      "gustare_dupamasa": {
+        "nume": "Chefir",
+        "ingrediente": [
+          "chefir 150 ml"
+        ],
+        "portie": "1 pahar mic",
+        "kcal": 80,
+        "sodiu_mg": 60
+      },
+      "ceai": {
+        "nume": "Ceai verde slab cu lămâie",
+        "cum": "1 lingură de ceai verde la 1 litru de apă la 80 °C (nu clocotită), 3 minute, apoi scoți frunzele. Bea-l până la prânz.",
+        "de_ce": "Are puțină cafeină: nu-l lua după-amiaza târziu."
+      }
+    },
+    {
+      "data": "2026-10-29",
+      "zi": "Joi",
+      "mic_dejun": {
+        "nume": "Tartină cu avocado și ou fiert",
+        "ingrediente": [
+          "1 felie de pâine integrală 30 g",
+          "avocado 40 g",
+          "1 ou fiert",
+          "roșie",
+          "semințe de floarea-soarelui 5 g",
+          "piper",
+          "lămâie"
+        ],
+        "portie": "1 tartină + 1 ou",
+        "kcal": 320,
+        "sodiu_mg": 230,
+        "pregatire": "Strivești avocado cu lămâie și piper, întinzi pe pâine, adaugi roșia și oul tăiat. Fără sare.",
+        "nota": "Avocado are potasiu; nu pune sare, ajunge lămâia și piperul."
+      },
+      "gustare_dimineata": {
+        "nume": "Portocală",
+        "ingrediente": [
+          "1 portocală"
+        ],
+        "portie": "1 portocală",
+        "kcal": 70,
+        "sodiu_mg": 1
+      },
+      "pranz": {
+        "nume": "Tocăniță de curcan cu legume și cartofi",
+        "ingrediente": [
+          "piept de curcan 100 g",
+          "ardei gras 60 g",
+          "morcov 50 g",
+          "dovlecel 80 g",
+          "cartofi fierți 100 g",
+          "pastă de roșii fără sare 1 lingură",
+          "boia",
+          "cimbru",
+          "usturoi"
+        ],
+        "portie": "1 caserolă mică",
+        "kcal": 450,
+        "sodiu_mg": 130,
+        "pregatire": "Gătită în ajun, fără sare, cu boia și cimbru; se încălzește sau se mănâncă rece.",
+        "nota": "Ai grijă la pasta de roșii: alege una fără sare adăugată (citește eticheta)."
+      },
+      "gustare_dupamasa": {
+        "nume": "Nuci și prune uscate",
+        "ingrediente": [
+          "nuci 15 g",
+          "3 prune uscate"
+        ],
+        "portie": "o mână mică",
+        "kcal": 150,
+        "sodiu_mg": 5
+      },
+      "ceai": {
+        "nume": "Rooibos cu scorțișoară",
+        "cum": "2 lingurițe de rooibos + un băț mic de scorțișoară, 1 litru apă fierbinte, 6 minute.",
+        "de_ce": "Fără cafeină, gust dulceag natural, deci nu ai nevoie de zahăr."
+      }
+    },
+    {
+      "data": "2026-10-30",
+      "zi": "Vineri",
+      "mic_dejun": {
+        "nume": "Budincă de chia cu lapte și kiwi",
+        "ingrediente": [
+          "semințe de chia 20 g",
+          "lapte 1,5% 150 ml",
+          "1 kiwi",
+          "scorțișoară"
+        ],
+        "portie": "1 borcan mic",
+        "kcal": 260,
+        "sodiu_mg": 55,
+        "pregatire": "Seara amesteci chia cu laptele și scorțișoara și lași la frigider; dimineața adaugi kiwi tăiat."
+      },
+      "gustare_dimineata": {
+        "nume": "Struguri",
+        "ingrediente": [
+          "struguri 100 g"
+        ],
+        "portie": "o mână",
+        "kcal": 70,
+        "sodiu_mg": 2
+      },
+      "pranz": {
+        "nume": "Paste integrale cu legume la grătar și pui",
+        "ingrediente": [
+          "paste integrale 60 g (uscate)",
+          "piept de pui 80 g",
+          "dovlecel 80 g",
+          "ardei gras 60 g",
+          "roșii cherry 60 g",
+          "busuioc",
+          "usturoi",
+          "ulei de măsline 1 linguriță"
+        ],
+        "portie": "1 caserolă mică",
+        "kcal": 480,
+        "sodiu_mg": 100,
+        "pregatire": "Pastele se fierb fără sare în apă. Legumele și puiul la tigaie cu puțin ulei, usturoi și busuioc.",
+        "nota": "Fără brânză sărată deasupra (parmezan, telemea): are mult sodiu."
+      },
+      "gustare_dupamasa": {
+        "nume": "Iaurt cu miere",
+        "ingrediente": [
+          "iaurt natural 125 g",
+          "miere 1 linguriță"
+        ],
+        "portie": "1 pahar mic",
+        "kcal": 100,
+        "sodiu_mg": 60
+      },
+      "ceai": {
+        "nume": "Mușețel cu mentă",
+        "cum": "1 lingură de mușețel + 1 lingură de mentă, 1 litru apă fierbinte, 7 minute.",
+        "de_ce": "Fără cafeină, ușor de băut pe tot parcursul zilei."
+      }
+    }
+  ],
+  "cumparaturi": [
+    {
+      "produs": "Fulgi de ovăz",
+      "cantitate": "500 g",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Piept de pui",
+      "cantitate": "300 g",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Piept de curcan",
+      "cantitate": "120 g",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Somon (file, proaspăt sau congelat simplu)",
+      "cantitate": "100 g",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Ouă",
+      "cantitate": "6 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Lapte 1,5%",
+      "cantitate": "1 l",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Iaurt natural, fără zahăr",
+      "cantitate": "4 pahare mici",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Chefir",
+      "cantitate": "1 pahar mic",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Fructe de pădure congelate",
+      "cantitate": "100 g",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Mere",
+      "cantitate": "2 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Banane",
+      "cantitate": "1 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Pere",
+      "cantitate": "1 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Portocale",
+      "cantitate": "1 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Kiwi",
+      "cantitate": "1 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Struguri",
+      "cantitate": "100 g",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Broccoli",
+      "cantitate": "100 g",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Spanac",
+      "cantitate": "50 g",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Fasole verde",
+      "cantitate": "100 g",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Cartof dulce",
+      "cantitate": "1 mic",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Dovlecel",
+      "cantitate": "2 mici",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Ardei gras",
+      "cantitate": "3 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Roșii și roșii cherry",
+      "cantitate": "4 roșii + 150 g cherry",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Morcovi",
+      "cantitate": "4 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Avocado",
+      "cantitate": "1 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Lămâi",
+      "cantitate": "3 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Linte uscată",
+      "cantitate": "150 g",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Orez integral",
+      "cantitate": "100 g",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Paste integrale",
+      "cantitate": "70 g",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Pâine integrală (felii)",
+      "cantitate": "2 felii",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Nuci decojite, nesărate",
+      "cantitate": "50 g",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Migdale nesărate",
+      "cantitate": "6 buc.",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Semințe de chia",
+      "cantitate": "20 g",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Semințe de dovleac",
+      "cantitate": "10 g",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Prune uscate",
+      "cantitate": "3 buc.",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Pastă de roșii fără sare adăugată",
+      "cantitate": "1 borcan mic",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Hibiscus uscat și măceșe",
+      "cantitate": "20 g + 10 g",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Flori de tei, mentă, mușețel",
+      "cantitate": "câte un plic",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Ceai verde, rooibos",
+      "cantitate": "câte un plic",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Ulei de măsline",
+      "cantitate": "ai deja?",
+      "magazin": "Acasă"
+    },
+    {
+      "produs": "Scorțișoară, boia, piper, cimbru, busuioc, mărar",
+      "cantitate": "condimente",
+      "magazin": "Acasă"
+    },
+    {
+      "produs": "Miere, usturoi, oțet de mere",
+      "cantitate": "puțin",
+      "magazin": "Acasă"
+    }
+  ],
+  "sfaturi": [
+    "Nu pune sare la gătit: lămâie, usturoi, ierburi și piper dau gust.",
+    "Citește eticheta la pâine, pastă de roșii și conserve: caută sub 0,3 g sare la 100 g.",
+    "Bea apă pe parcursul zilei; ceaiul din termos se numără la lichide, fără zahăr.",
+    "Dacă iei medicamente pentru tensiune, întreabă medicul despre hibiscus și potasiu (banane, cartof dulce, spanac).",
+    "Măsoară-ți tensiunea dimineața, la aceeași oră, și notează valorile pentru medic."
+  ]
+}
