@@ -1,0 +1,49 @@
+{
+  "schema": "trainlive.analiza",
+  "schema_version": 1,
+  "id": "2026-10-22T16-06-37_alergare",
+  "creat_la": "2026-10-22T17:30:00+03:00",
+  "verdict": "partial",
+  "titlu": "4 din 4 blocuri de 120 s, vârf 141-151 și reluare sub 130, dar cadență 131 spm, Z1+Z2 84,3 % și probă la 6:39/km.",
+  "praguri": [
+    {
+      "nume": "Vârf sub 155 în blocuri",
+      "rezultat": "4 din 4 (141, 144, 146, 151)",
+      "ok": true
+    },
+    {
+      "nume": "Reluare sub 130",
+      "rezultat": "4 din 4 (103, 113, 102, 111)",
+      "ok": true
+    },
+    {
+      "nume": "Cadență 165-170 spm",
+      "rezultat": "0 din 4 (130-132 spm)",
+      "ok": false
+    },
+    {
+      "nume": "Z1+Z2 peste 85 %",
+      "rezultat": "84,3 %",
+      "ok": false
+    }
+  ],
+  "puncte_bune": [
+    "4 din 4 blocuri de 120 s complete",
+    "Vârf 141→151, sub 155 în toate blocurile",
+    "Reluare stabilă 102-113",
+    "Doar 6 s peste 155, puls mediu 116"
+  ],
+  "probleme": [
+    "Proba la 6:39/km, sub limita dură 7:15; blocurile 1-2 la 7:17-7:18",
+    "Vârful urcă 141→151 cu ritm tot mai lent (oboseală)",
+    "Cadență 131 spm, ținta 165-170",
+    "Z1+Z2 84,3 %, la limită",
+    "Subiectiv necompletat"
+  ],
+  "sesiunea_urmatoare": {
+    "id": "S1.11",
+    "fisier": "sesiuni/S1.11.json",
+    "motiv": "Partial: repetăm structura 4×120 s cu o singură corecție, controlul ritmului (probă la 8:00/km, blocuri 7:30-8:00)."
+  },
+  "progres_headline_pct": 3.2
+}

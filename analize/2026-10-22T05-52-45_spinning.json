@@ -1,0 +1,41 @@
+{
+  "schema": "trainlive.analiza",
+  "schema_version": 1,
+  "id": "2026-10-22T05-52-45_spinning",
+  "creat_la": "2026-10-22T17:30:00+03:00",
+  "verdict": "partial",
+  "titlu": "30 min liber, puls sub 126 și Z2 doar 206 s; cadență 73 rpm, rezistența Z2 estimată 43.",
+  "praguri": [
+    {
+      "nume": "Puls sub 137 (fără depășiri)",
+      "rezultat": "maxim 126",
+      "ok": true
+    },
+    {
+      "nume": "Timp în Z2 (117-137)",
+      "rezultat": "206 s din 1802 (11,4 %)",
+      "ok": false
+    },
+    {
+      "nume": "Cadență 80-90 rpm",
+      "rezultat": "medie 73",
+      "ok": false
+    }
+  ],
+  "puncte_bune": [
+    "30 min complete, fără deconectări",
+    "Puls sub 137 tot timpul",
+    "Rezistența Z2 estimată la 43 (primă calibrare)"
+  ],
+  "probleme": [
+    "Doar 206 s în Z2, apărut abia în ultimele 5 minute",
+    "Cadență 73 rpm sub 80-90",
+    "Calibrare pe 206 s, cu deriva pulsului la final"
+  ],
+  "sesiunea_urmatoare": {
+    "id": "SP1.2",
+    "fisier": "sesiuni/SP1.2.json",
+    "motiv": "Pornire la rezistența 40 (calibrată 43) și cadență 80-90; planul SP1.2 actualizat."
+  },
+  "progres_headline_pct": 3.2
+}
