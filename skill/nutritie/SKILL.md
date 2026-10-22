@@ -1,6 +1,6 @@
 ---
 name: nutritie
-description: Pregătește meniul săptămânii viitoare (luni–vineri: mic dejun acasă, prânz la serviciu, 2 gustări, ceai la termos) pentru Bogdan, care este hipertensiv, pe baza alimentelor pe care le are acasă, evitând mâncărurile din lista de excluse și repetând mai des favoritele, și îl publică pe GitHub pentru aplicația Nutriție. Folosește OBLIGATORIU acest skill ori de câte ori mesajul începe cu "/nutritie" — fără excepție — sau când Bogdan cere să refaci unele mese din meniu sau să adaugi/ștergi mâncăruri din lista de excluse.
+description: Pregătește meniul săptămânii viitoare (luni–vineri: mic dejun acasă, prânz la serviciu, 2 gustări, ceai la termos) pentru Bogdan, care este hipertensiv, pe baza alimentelor pe care le are acasă, evitând mâncărurile din lista de excluse și repetând mai des favoritele, și îl publică pe GitHub pentru aplicația Nutriție. Folosește OBLIGATORIU acest skill ori de câte ori mesajul începe cu "/nutritie" — fără excepție — sau când Bogdan cere să refaci unele mese din meniu sau să adaugi/ștergi mâncăruri din lista de excluse sau de favorite.
 ---
 
 # /nutritie — meniul săptămânii pentru Bogdan
@@ -20,7 +20,7 @@ Textul de după `/nutritie` = alimentele pe care Bogdan le are acasă (text libe
 7. **Răspunde scurt**: pentru fiecare zi, mic dejun / prânz / ceai pe câte o linie (gustările pe scurt), apoi 2–3 observații (de ex. peștele de 2 ori, ce ai de cumpărat de la Lidl/Kaufland) și: „Deschide aplicația Nutriție sau apasă ↻ ca să-l vezi. Spune-mi ce mese nu-ți plac și le refac.” Nu lipi tot JSON-ul.
 
 ## Refacerea unor mese
-La „refă marți prânz” (sau mai multe): modifici DOAR acele mese în fișierul existent, păstrezi restul, recalculezi `cumparaturi` pentru tot meniul, actualizezi `creat`, validezi, publici. Dacă Bogdan spune că nu mai vrea un fel permanent („nu-mi place X”), adaugă-l și în `setari.json` (citești fișierul, adaugi la `excluse`, nu ștergi nimic, `actualizat` = acum). Dacă e doar pentru săptămâna asta, nu-l adăuga acolo.
+La „refă marți prânz” (sau mai multe): modifici DOAR acele mese în fișierul existent, păstrezi restul, recalculezi `cumparaturi` pentru tot meniul, actualizezi `creat`, validezi, publici. Dacă Bogdan spune că nu mai vrea un fel permanent („nu-mi place X”), adaugă-l și în `setari.json` (citești fișierul, adaugi la `excluse`, păstrezi `favorite`, nu ștergi nimic, `actualizat` = acum). Dacă e doar pentru săptămâna asta, nu-l adăuga acolo.
 
 ## Reguli de nutriție (hipertensiv, porții mici)
 - **Public**: Bogdan, 41 ani, 185 cm, 83 kg, hipertensiv, face alergare și spinning. Nu-i place să mănânce mult: porții mici. Micul dejun se face acasă (maxim ~15 min; poate fi pregătit seara). Prânzul îl ia la serviciu într-o caserolă: să fie bun rece sau încălzit, fără miros puternic, să reziste câteva ore.
