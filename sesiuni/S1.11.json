@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "versiune": 1,
+  "id": "S1.11",
+  "sesiune": "S1.11",
+  "activitate": "alergare",
+  "data": "2026-10-24",
+  "titlu": "Proba + 4×(2' alergat / 3' mers)",
+  "obiectiv": "Toate cele 4 blocuri de 2' duse la capăt, vârf sub 155, pornire sub 130 și ritm mediu pe bloc între 7:30 și 8:00/km (niciodată sub 7:15).",
+  "nota_generala": "La S1.10 ai făcut 4 din 4 blocuri de 120 s, cu vârf 141/144/146/151 și reluare 103/113/102/111 (pragurile de puls atinse), dar proba a ieșit la 6:39/km, iar blocurile 1-2 la 7:17-7:18/km, la limita de 7:15. Repet structura și schimb un singur lucru: controlul ritmului. Dacă ceasul arată sub 7:30/km, încetinești imediat. Blocul nu crește până nu confirmăm vârful sub 155 la ritm corect. Durere ascuțită = stop.",
+  "ritmuri": {
+    "alergare": "7:30-8:00/km (limita dură: niciodată sub 7:15)",
+    "mers_incalzire": "10:30-11:30/km",
+    "mers_refacere": "11:30-12:30/km",
+    "mers_racire": "12:00-13:00/km"
+  },
+  "praguri": {
+    "puls_alerta": 155,
+    "puls_reluare": 130,
+    "zona_lucru": [
+      117,
+      137
+    ],
+    "puls_max": 195
+  },
+  "criterii_reusita": [
+    "4 din 4 blocuri complete",
+    "vârf sub 155 în fiecare bloc",
+    "pornire sub 130",
+    "ritm mediu pe bloc 7:30-8:00/km, probă la 8:00/km"
+  ],
+  "pasi": [
+    {
+      "tip": "incalzire",
+      "nume": "11:00/km · Mers alert",
+      "durata": 300,
+      "nota": "puls sub 110",
+      "tinte": {
+        "puls": [
+          90,
+          110
+        ],
+        "ritm_min_km": [
+          "10:30",
+          "11:30"
+        ]
+      }
+    },
+    {
+      "tip": "forta",
+      "nume": "Ridicări pe vârfuri · 2x15",
+      "durata": 60,
+      "nota": "urci lent, cobori controlat"
+    },
+    {
+      "tip": "forta",
+      "nume": "Genuflexiuni · 10 repetări",
+      "durata": 45
+    },
+    {
+      "tip": "alergare",
+      "nume": "8:00/km · Proba de calibrare",
+      "durata": 60,
+      "nota": "8:00/km fix, nu mai repede; pași mici",
+      "tinte": {
+        "ritm_min_km": [
+          "7:45",
+          "8:15"
+        ],
+        "puls": [
+          100,
+          140
+        ],
+        "cadenta_spm": [
+          160,
+          172
+        ]
+      }
+    },
+    {
+      "tip": "mers",
+      "nume": "12:00/km · Mers după probă",
+      "durata": 180,
+      "nota": "pleci sub 120",
+      "tinte": {
+        "puls": [
+          90,
+          120
+        ],
+        "ritm_min_km": [
+          "11:30",
+          "12:30"
+        ]
+      },
+      "pana_la_puls_sub": 120,
+      "max_prelungire_s": 120
+    },
+    {
+      "repeta": 4,
+      "pasi": [
+        {
+          "tip": "alergare",
+          "nume": "7:30-8:00/km · Alergare",
+          "durata": 120,
+          "nota": "Sub 7:30/km încetinești",
+          "tinte": {
+            "puls": [
+              117,
+              155
+            ],
+            "ritm_min_km": [
+              "7:30",
+              "8:00"
+            ],
+            "cadenta_spm": [
+              160,
+              172
+            ]
+          }
+        },
+        {
+          "tip": "mers",
+          "nume": "12:00/km · Mers de refacere",
+          "durata": 180,
+          "nota": "pleci doar sub 130",
+          "tinte": {
+            "puls": [
+              90,
+              130
+            ],
+            "ritm_min_km": [
+              "11:30",
+              "12:30"
+            ]
+          },
+          "pana_la_puls_sub": 130,
+          "max_prelungire_s": 120
+        }
+      ]
+    },
+    {
+      "tip": "racire",
+      "nume": "12:30/km · Mers lejer",
+      "durata": 240,
+      "nota": "până pulsul scade sub 110",
+      "tinte": {
+        "puls": [
+          80,
+          115
+        ]
+      }
+    },
+    {
+      "tip": "racire",
+      "nume": "Întinderi · 30 s pe grupă",
+      "durata": 240,
+      "nota": "gambe, cvadriceps, ischiogambieri, fesieri"
+    }
+  ]
+}

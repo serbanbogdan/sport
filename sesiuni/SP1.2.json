@@ -6,9 +6,9 @@
   "data": "2026-10-23",
   "titlu": "Spinning dimineata · 3×6' zona 2 · 30 min",
   "obiectiv": "30 min inainte de munca, puls in zona 2 (117-137) in cel putin 80% din blocuri, cadenta 80-90 rpm.",
-  "nota_generala": "Spinning de dimineata, maxim 30 de minute, intensitate usoara (zona 2), nu inlocuieste alergarea. Porneste la rezistenta calibrata (30 daca nu exista calibrare); peste 137 scazi rezistenta cu 5, sub 117 dupa 2 minute urci cu 5. Cadenta 80-90 rpm, nu compensezi cu viteza.",
+  "nota_generala": "La spinningul liber din 22.10 pulsul a stat sub 117 aproape tot timpul la rezistența 30 și 73 rpm; Z2 a apărut abia după 25 de minute la rezistența 36-43 (calibrare: 43, din doar 206 s). Pornești acum la rezistența 40 și ții 80-90 rpm. Peste 137 scazi rezistența cu 5, sub 117 după 2 minute urci cu 5. Maxim 30 de minute, nu înlocuiește alergarea.",
   "ritmuri": {
-    "lucru": "80-90 rpm, rezistența 25-35",
+    "lucru": "80-90 rpm, rezistența 35-45",
     "usor": "70-80 rpm, rezistența 15-20"
   },
   "praguri": {
@@ -53,15 +53,15 @@
           "tip": "alt",
           "nume": "80-90 rpm · Bloc zona 2",
           "durata": 360,
-          "nota": "pornesti la rezistenta 30",
+          "nota": "pornești la rezistența 40",
           "tinte": {
             "cadenta_rpm": [
               80,
               90
             ],
             "rezistenta": [
-              25,
-              35
+              35,
+              45
             ],
             "putere_w": [
               60,
