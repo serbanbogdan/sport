@@ -1,7 +1,7 @@
 {
   "schema": "trainlive.rezultate",
   "schema_version": 1,
-  "actualizat_la": "2026-10-22T06:22:59+03:00",
+  "actualizat_la": "2026-10-22T16:45:39+03:00",
   "sesiuni": [
     {
       "id": "2026-10-20T18-10-51_alergare",
@@ -35,6 +35,24 @@
       "kcal": 35,
       "cel_mai_lung_bloc_alergare_s": null,
       "putere_medie_w": 81,
+      "analiza": null,
+      "analizat": false,
+      "verdict": null
+    },
+    {
+      "id": "2026-10-22T16-06-37_alergare",
+      "activitate": "alergare",
+      "start": "2026-10-22T16:06:37+03:00",
+      "data": "2026-10-22",
+      "plan_id": "S1.10",
+      "fisier": "sesiuni/2026/10/2026-10-22T16-06-37_alergare.json",
+      "durata_s": 2328,
+      "distanta_m": 3721,
+      "puls_mediu": 116,
+      "puls_max": 161,
+      "kcal": 396,
+      "cel_mai_lung_bloc_alergare_s": 120,
+      "putere_medie_w": null,
       "analiza": null,
       "analizat": false,
       "verdict": null
