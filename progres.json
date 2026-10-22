@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generat_la": "2026-10-22T06:22:59+03:00",
+  "generat_la": "2026-10-22T16:45:39+03:00",
   "generat_de": "proceseaza.py",
-  "sesiuni_aplicatie": 2,
+  "sesiuni_aplicatie": 3,
   "sursa": {
     "strava_athlete_id": 28920338,
     "ultima_activitate_strava_id": "20621071322",
@@ -84,49 +84,49 @@
     "nota": "Planul initial: 4 saptamani × 3 sesiuni = 12, ultima = test 25 min continuu. Luna 1 a fost extinsa (sesiuni repetate), deci procentul e orientativ."
   },
   "totaluri": {
-    "alergari": 11,
-    "distanta_totala_km": 41.52,
-    "timp_in_miscare_total_s": 25223,
-    "timp_in_miscare_total_h": 7.01,
+    "alergari": 12,
+    "distanta_totala_km": 45.24,
+    "timp_in_miscare_total_s": 27483,
+    "timp_in_miscare_total_h": 7.63,
     "relative_effort_total": 301,
     "ritm_mediu_global_min_km": "10:07",
     "distanta_medie_pe_sesiune_km": 3.77
   },
   "ultima_sesiune": {
-    "nr": 11,
+    "nr": 12,
     "sursa": "aplicatie",
-    "rezultat_id": "2026-10-20T18-10-51_alergare",
+    "rezultat_id": "2026-10-22T16-06-37_alergare",
     "strava_id": null,
-    "data": "2026-10-20",
-    "ora_start": "18:10",
-    "sesiune_plan": "S1.9",
-    "titlu_plan": "Proba + 4×(2'30 alergat / 3' mers)",
-    "distanta_km": 3.83,
-    "distanta_cumulata_km": 41.52,
-    "timp_in_miscare_s": 2418,
-    "timp_total_s": 2452,
-    "ritm_mediu_in_miscare_min_km": "10:31",
-    "ritm_mediu_in_miscare_s_km": 631,
-    "ritm_mediu_total_min_km": "10:39",
-    "cel_mai_rapid_km_s": 556,
-    "cel_mai_rapid_km_min_km": "9:16",
-    "puls_mediu": 130,
-    "puls_max": 162,
-    "puls_max_pct_din_195": 83.1,
+    "data": "2026-10-22",
+    "ora_start": "16:06",
+    "sesiune_plan": "S1.10",
+    "titlu_plan": "Proba + 4×(2' alergat / 3' mers)",
+    "distanta_km": 3.72,
+    "distanta_cumulata_km": 45.24,
+    "timp_in_miscare_s": 2260,
+    "timp_total_s": 2328,
+    "ritm_mediu_in_miscare_min_km": "10:07",
+    "ritm_mediu_in_miscare_s_km": 607,
+    "ritm_mediu_total_min_km": "10:26",
+    "cel_mai_rapid_km_s": 563,
+    "cel_mai_rapid_km_min_km": "9:23",
+    "puls_mediu": 116,
+    "puls_max": 161,
+    "puls_max_pct_din_195": 82.6,
     "relative_effort": null,
-    "cadenta_medie_sesiune_spm": 105,
-    "cadenta_in_alergare_spm": 131,
+    "cadenta_medie_sesiune_spm": 106,
+    "cadenta_in_alergare_spm": 132,
     "plan": {
-      "durata_planificata_s": 2445,
-      "alergare_planificata_s": 660,
+      "durata_planificata_s": 2325,
+      "alergare_planificata_s": 540,
       "blocuri_planificate": 4,
       "blocuri_executate": 4,
-      "bloc_alergare_max_masurat_s": 112
+      "bloc_alergare_max_masurat_s": 120
     },
     "realizat_fata_de_plan": {
-      "durata_pct": 100.3,
+      "durata_pct": 100.1,
       "blocuri_pct": 100.0,
-      "alergare_pct": 83.6,
+      "alergare_pct": 98.3,
       "blocuri_complete_pct": 100.0,
       "nota": "calculat de proceseaza.py din rezultatul aplicatiei Train Live"
     },
@@ -134,115 +134,81 @@
       "puls_max_sub_155_proxy": false,
       "nota": "proxy: HR max al intregii sesiuni <= 155; pragul real e pe blocurile de alergare"
     },
-    "observatii": "4 din 4 blocuri de 150 s duse la capat, toate pornite sub 130 (104/119/125/128), dar varfuri 155/158/157/162: pulsul urca ~50 bpm in 150 s si inca urca la final. Cadenta 131 spm (tinta 165-170), Z1+Z2 69,5%. Verdict partial; urmatoarea sesiune scurteaza blocurile la 120 s.",
+    "observatii": "Sesiune inregistrata cu Train Live; analiza lui Claude urmeaza in rezulate/analize/2026-10-22T16-06-37_alergare.md.",
     "analiza_detaliata": {
       "sursa": "Train Live: puls Venu X1 + GPS si pasi de la telefon, esantioane 1 Hz; blocuri = viteza >= 1,95 m/s minim 20 s",
       "blocuri_alergare": [
         {
           "nr": 1,
-          "durata_s": 34,
-          "planificat_s": 150,
-          "ritm_min_km": "7:54",
-          "puls_la_reluare": 128,
-          "puls_varf": 130,
-          "cadenta_spm": 130,
+          "durata_s": 63,
+          "planificat_s": 120,
+          "ritm_min_km": "6:44",
+          "puls_la_reluare": 108,
+          "puls_varf": 139,
+          "cadenta_spm": 133,
           "complet": false
         },
         {
           "nr": 2,
-          "durata_s": 93,
-          "planificat_s": 150,
-          "ritm_min_km": "7:35",
-          "puls_la_reluare": 110,
-          "puls_varf": 142,
-          "cadenta_spm": 131,
-          "complet": false
+          "durata_s": 120,
+          "planificat_s": 120,
+          "ritm_min_km": "7:17",
+          "puls_la_reluare": 107,
+          "puls_varf": 143,
+          "cadenta_spm": 130,
+          "complet": true
         },
         {
           "nr": 3,
-          "durata_s": 46,
-          "planificat_s": 150,
-          "ritm_min_km": "8:11",
-          "puls_la_reluare": 144,
-          "puls_varf": 156,
-          "cadenta_spm": 130,
-          "complet": false
+          "durata_s": 119,
+          "planificat_s": 120,
+          "ritm_min_km": "7:15",
+          "puls_la_reluare": 111,
+          "puls_varf": 145,
+          "cadenta_spm": 133,
+          "complet": true
         },
         {
           "nr": 4,
-          "durata_s": 112,
-          "planificat_s": 150,
-          "ritm_min_km": "7:28",
-          "puls_la_reluare": 117,
-          "puls_varf": 156,
-          "cadenta_spm": 132,
-          "complet": false
+          "durata_s": 116,
+          "planificat_s": 120,
+          "ritm_min_km": "7:30",
+          "puls_la_reluare": 104,
+          "puls_varf": 146,
+          "cadenta_spm": 131,
+          "complet": true
         },
         {
           "nr": 5,
-          "durata_s": 27,
-          "planificat_s": 150,
-          "ritm_min_km": "8:23",
-          "puls_la_reluare": 156,
-          "puls_varf": 158,
-          "cadenta_spm": 131,
+          "durata_s": 40,
+          "planificat_s": 120,
+          "ritm_min_km": "7:38",
+          "puls_la_reluare": 109,
+          "puls_varf": 127,
+          "cadenta_spm": 133,
           "complet": false
         },
         {
           "nr": 6,
-          "durata_s": 110,
-          "planificat_s": 150,
-          "ritm_min_km": "7:55",
-          "puls_la_reluare": 154,
-          "puls_varf": 156,
-          "cadenta_spm": 130,
-          "complet": false
-        },
-        {
-          "nr": 7,
-          "durata_s": 96,
-          "planificat_s": 150,
-          "ritm_min_km": "7:57",
-          "puls_la_reluare": 126,
-          "puls_varf": 157,
-          "cadenta_spm": 131,
-          "complet": false
-        },
-        {
-          "nr": 8,
-          "durata_s": 34,
-          "planificat_s": 150,
-          "ritm_min_km": "8:29",
-          "puls_la_reluare": 158,
-          "puls_varf": 162,
-          "cadenta_spm": 129,
+          "durata_s": 73,
+          "planificat_s": 120,
+          "ritm_min_km": "7:45",
+          "puls_la_reluare": 130,
+          "puls_varf": 151,
+          "cadenta_spm": 133,
           "complet": false
         }
       ],
       "zone_puls_pct": {
-        "Z1": 18.2,
-        "Z2": 51.3,
-        "Z3": 21.0,
-        "Z4": 9.5,
+        "Z1": 64.5,
+        "Z2": 19.8,
+        "Z3": 15.4,
+        "Z4": 0.3,
         "Z5": 0.0
       },
-      "z1_z2_pct": 69.5,
-      "secunde_peste_155": 232,
-      "secunde_peste_160": 34,
-      "praguri_plan": {
-        "puls_sub_155": "0 din 4 blocuri",
-        "reluare_sub_130": "4 din 4",
-        "cadenta_165_170": "0 din 4 (131-132 spm)",
-        "z1_z2_peste_85_pct": "69,5%"
-      },
-      "cadenta_in_alergare_spm": 131,
-      "puls_max_blocuri_loc": [
-        155,
-        158,
-        157,
-        162
-      ],
-      "verdict": "partial"
+      "z1_z2_pct": 84.3,
+      "secunde_peste_155": 6,
+      "secunde_peste_160": 3
     }
   },
   "tendinte": {
@@ -257,7 +223,8 @@
       4.0,
       3.3,
       3.91,
-      3.83
+      3.83,
+      3.72
     ],
     "puls_mediu": [
       152,
@@ -270,7 +237,8 @@
       135.7,
       127.8,
       131.8,
-      130
+      130,
+      116
     ],
     "puls_max": [
       193,
@@ -283,7 +251,8 @@
       166,
       164,
       166,
-      162
+      162,
+      161
     ],
     "relative_effort": [
       85,
@@ -296,6 +265,7 @@
       36,
       19,
       29,
+      null,
       null
     ],
     "ritm_mediu_in_miscare_s_km": [
@@ -309,7 +279,8 @@
       601,
       547,
       597,
-      631
+      631,
+      607
     ],
     "cel_mai_rapid_km_s": [
       null,
@@ -322,7 +293,8 @@
       538,
       505,
       536,
-      556
+      556,
+      563
     ],
     "etichete_date": [
       "2026-08-29",
@@ -335,7 +307,8 @@
       "2026-10-06",
       "2026-10-13",
       "2026-10-17",
-      "2026-10-20"
+      "2026-10-20",
+      "2026-10-22"
     ],
     "interpretare": {
       "distanta": "3,84 km (S1.1) -> 4,01 km (S1.7 si 06.10); 3,30 km la 13.10; 3,91 km la 17.10",
@@ -356,6 +329,7 @@
       "strava",
       "strava",
       "strava",
+      "aplicatie",
       "aplicatie"
     ]
   },
@@ -410,6 +384,11 @@
         "de_la": "2026-10-17",
         "pana_la": "2026-10-20",
         "zile": 3
+      },
+      {
+        "de_la": "2026-10-20",
+        "pana_la": "2026-10-22",
+        "zile": 2
       }
     ],
     "cea_mai_lunga_pauza_zile": 20,
@@ -459,9 +438,9 @@
       },
       {
         "saptamana_iso": "2026-W43",
-        "sesiuni": 1,
-        "km": 3.83,
-        "timp_in_miscare_s": 2418,
+        "sesiuni": 2,
+        "km": 7.55,
+        "timp_in_miscare_s": 4678,
         "relative_effort_total": null
       }
     ]
@@ -501,7 +480,7 @@
       "ritm_limita_dura_min_km": "7:15"
     },
     "sesiuni_cu_puls_max_sub_155": 2,
-    "sesiuni_cu_puls_max_sub_155_pct": 18.2
+    "sesiuni_cu_puls_max_sub_155_pct": 16.7
   },
   "alte_activitati": [
     {
@@ -634,9 +613,9 @@
     ]
   },
   "volum_aerob_combinat": {
-    "total_h": 7.51,
-    "spinning_pct": 6.7,
-    "alergare_s": 25223,
+    "total_h": 8.13,
+    "spinning_pct": 6.2,
+    "alergare_s": 27483,
     "spinning_s": 1802,
     "definitie": "alergare_s = totaluri.timp_in_miscare_total_s; spinning_s = suma timp_in_miscare_s din spinning.sesiuni; total_h = (alergare_s + spinning_s) / 3600; spinning_pct = spinning_s / total × 100"
   }
