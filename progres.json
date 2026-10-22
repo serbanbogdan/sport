@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generat_la": "2026-10-22T16:45:39+03:00",
-  "generat_de": "proceseaza.py",
+  "generat_la": "2026-10-22T17:40:00+03:00",
+  "generat_de": "claude",
   "sesiuni_aplicatie": 3,
   "sursa": {
     "strava_athlete_id": 28920338,
@@ -132,71 +132,51 @@
     },
     "praguri": {
       "puls_max_sub_155_proxy": false,
-      "nota": "proxy: HR max al intregii sesiuni <= 155; pragul real e pe blocurile de alergare"
+      "nota": "HR max al sesiunii 161 (probabil artefact in mers); in blocurile de alergare toate vârfurile sunt sub 155"
     },
-    "observatii": "Sesiune inregistrata cu Train Live; analiza lui Claude urmeaza in rezulate/analize/2026-10-22T16-06-37_alergare.md.",
+    "observatii": "4 din 4 blocuri de 120 s complete, fiecare pornit sub 130 (103/113/102/111), vârf 141/144/146/151 (sub 155 in toate); cadenta 130-132 spm si Z1+Z2 84,3 % raman sub prag. Proba la 6:39/km, sub limita dura 7:15. Verdict: partial. Analiza: rezulate/analize/2026-10-22T16-06-37_alergare.md",
     "analiza_detaliata": {
       "sursa": "Train Live: puls Venu X1 + GPS si pasi de la telefon, esantioane 1 Hz; blocuri = viteza >= 1,95 m/s minim 20 s",
       "blocuri_alergare": [
         {
           "nr": 1,
-          "durata_s": 63,
+          "durata_s": 120,
           "planificat_s": 120,
-          "ritm_min_km": "6:44",
-          "puls_la_reluare": 108,
-          "puls_varf": 139,
-          "cadenta_spm": 133,
-          "complet": false
+          "ritm_min_km": "7:17",
+          "puls_la_reluare": 103,
+          "puls_varf": 141,
+          "cadenta_spm": 130,
+          "complet": true
         },
         {
           "nr": 2,
           "durata_s": 120,
           "planificat_s": 120,
-          "ritm_min_km": "7:17",
-          "puls_la_reluare": 107,
-          "puls_varf": 143,
-          "cadenta_spm": 130,
+          "ritm_min_km": "7:18",
+          "puls_la_reluare": 113,
+          "puls_varf": 144,
+          "cadenta_spm": 132,
           "complet": true
         },
         {
           "nr": 3,
-          "durata_s": 119,
+          "durata_s": 120,
           "planificat_s": 120,
-          "ritm_min_km": "7:15",
-          "puls_la_reluare": 111,
-          "puls_varf": 145,
-          "cadenta_spm": 133,
+          "ritm_min_km": "7:34",
+          "puls_la_reluare": 102,
+          "puls_varf": 146,
+          "cadenta_spm": 130,
           "complet": true
         },
         {
           "nr": 4,
-          "durata_s": 116,
+          "durata_s": 120,
           "planificat_s": 120,
-          "ritm_min_km": "7:30",
-          "puls_la_reluare": 104,
-          "puls_varf": 146,
-          "cadenta_spm": 131,
-          "complet": true
-        },
-        {
-          "nr": 5,
-          "durata_s": 40,
-          "planificat_s": 120,
-          "ritm_min_km": "7:38",
-          "puls_la_reluare": 109,
-          "puls_varf": 127,
-          "cadenta_spm": 133,
-          "complet": false
-        },
-        {
-          "nr": 6,
-          "durata_s": 73,
-          "planificat_s": 120,
-          "ritm_min_km": "7:45",
-          "puls_la_reluare": 130,
+          "ritm_min_km": "7:46",
+          "puls_la_reluare": 111,
           "puls_varf": 151,
-          "cadenta_spm": 133,
-          "complet": false
+          "cadenta_spm": 132,
+          "complet": true
         }
       ],
       "zone_puls_pct": {
@@ -208,7 +188,20 @@
       },
       "z1_z2_pct": 84.3,
       "secunde_peste_155": 6,
-      "secunde_peste_160": 3
+      "secunde_peste_160": 3,
+      "nota_blocuri": "Reconstruit din pasii planului; blocul 4 impartit de script in 40+73 s din cauza unei incetiniri scurte la 6,6 km/h (continuu). Proba 60 s la 6:39/km, puls 106-129.",
+      "praguri_plan": {
+        "puls_varf_sub_155": "4 din 4 (141, 144, 146, 151)",
+        "reluare_sub_130": "4 din 4 (103, 113, 102, 111)",
+        "cadenta_165_170": "0 din 4 (130-132 spm)",
+        "z1_z2_peste_85_pct": "84,3 % - nu"
+      },
+      "cadenta_in_alergare_spm": [
+        130,
+        132
+      ],
+      "puls_max_sesiune_loc": "161 la secunda 792, in mersul de dupa blocul 1: salt 144->161->148 in 12 s, probabil artefact senzor; in alergare maxim 151 (blocul 4)",
+      "puls_max_blocuri_loc": "141/144/146/151, la 110-116 s din fiecare bloc"
     }
   },
   "tendinte": {
@@ -313,10 +306,11 @@
     "interpretare": {
       "distanta": "3,84 km (S1.1) -> 4,01 km (S1.7 si 06.10); 3,30 km la 13.10; 3,91 km la 17.10",
       "cel_mai_rapid_km": "551 s (16.09) -> 538 s (06.10) -> 505 s (13.10, 8:25/km) -> 536 s (17.10): la 17.10 ritmul a fost controlat, nu cursa dupa record",
-      "puls_max": "peste 155 la 9 din 11 sesiuni; 162 la S1.9 (vs 166 la 17.10), dar toate cele 4 blocuri au avut varf 155-162",
+      "puls_max": "peste 155 la 10 din 12 sesiuni; S1.10: 161 in mers (probabil artefact), dar in blocuri 141-151, prima sesiune cu 4 din 4 sub 155",
       "pauze": "pauza de 20 de zile (16.09 -> 06.10) rupe seria; dupa ea: 06.10, 13.10, 17.10 (la 7 si 4 zile)",
-      "bloc_continuu": "92 s (S1.6, 14.09) -> 145 s (S1.8, 17.10) -> 150 s (S1.9, 20.10), prima data 4 din 4 blocuri complete",
-      "reluare": "104 -> 119 -> 125 -> 128 in S1.9: sub 130, dar in urcare"
+      "bloc_continuu": "92 s (S1.6, 14.09) -> 145 s (S1.8, 17.10) -> 150 s (S1.9, 20.10) -> 4x120 s la S1.10 (scadere planificata); maximul ramane 150 s",
+      "reluare": "104 -> 119 -> 125 -> 128 (S1.9) -> 103 -> 113 -> 102 -> 111 (S1.10): stabila, fara urcare",
+      "ritm": "proba S1.10 la 6:39/km (sub limita 7:15); blocuri 7:17, 7:18, 7:34, 7:46"
     },
     "sursa": [
       "strava",
@@ -498,12 +492,12 @@
     }
   ],
   "urmatoarea_sesiune": {
-    "cod": "SP1.1",
+    "cod": "SP1.2",
     "tip_activitate": "spinning",
-    "fisier_plan": "sesiuni/SP1.1.json",
-    "data_planificata": "2026-10-21",
-    "titlu": "Spinning zona 2 · 3×8' la 80-90 rpm",
-    "durata_planificata_s": 2400
+    "fisier_plan": "sesiuni/SP1.2.json",
+    "data_planificata": "2026-10-23",
+    "titlu": "Spinning dimineata · 3×6' zona 2 · 30 min",
+    "durata_planificata_s": 1800
   },
   "echipament": {
     "incaltaminte": [],
@@ -527,24 +521,24 @@
     "culoare_spinning": "#E7B366"
   },
   "urmatoarea_sesiune_alergare": {
-    "cod": "S1.10",
+    "cod": "S1.11",
     "tip_activitate": "alergare",
+    "fisier_plan": "sesiuni/S1.11.json",
+    "data_planificata": "2026-10-24",
     "titlu": "Proba + 4×(2' alergat / 3' mers)",
-    "data_planificata": "2026-10-22",
-    "fisier_plan": "sesiuni/S1.10.json",
     "durata_planificata_s": 2325,
     "alergare_planificata_s": 540,
     "bloc_continuu_planificat_s": 120,
-    "nota": "Repetare cu o singura corectie: blocuri de 120 s in loc de 150 s, ca varful de puls sa ramana sub 155. Blocul continuu nu creste pana atunci.",
-    "procent_headline_dupa_executie_corecta": 3.2
+    "procent_headline_dupa_executie_corecta": 3.2,
+    "nota": "Repetare cu o singura corectie: controlul ritmului (proba 8:00/km, blocuri 7:30-8:00, sub 7:30 incetinesti). Blocul 4x120 s nu creste pana nu se confirma varful sub 155 la ritm corect."
   },
   "urmatoarea_sesiune_spinning": {
-    "cod": "SP1.1",
+    "cod": "SP1.2",
     "tip_activitate": "spinning",
-    "fisier_plan": "sesiuni/SP1.1.json",
-    "data_planificata": "2026-10-21",
-    "titlu": "Spinning zona 2 · 3×8' la 80-90 rpm",
-    "durata_planificata_s": 2400
+    "fisier_plan": "sesiuni/SP1.2.json",
+    "data_planificata": "2026-10-23",
+    "titlu": "Spinning dimineata · 3×6' zona 2 · 30 min",
+    "durata_planificata_s": 1800
   },
   "spinning": {
     "totaluri": {
@@ -610,7 +604,8 @@
         "rezistenta_z2": 43,
         "secunde_z2": 206
       }
-    ]
+    ],
+    "nota": "Prima sesiune (liber, 22.10): doar 206 s in Z2, calibrarea 43 e orientativa. SP1.2 porneste la rezistenta 40, 80-90 rpm. SP1.1 (21.10) ratat."
   },
   "volum_aerob_combinat": {
     "total_h": 8.13,
