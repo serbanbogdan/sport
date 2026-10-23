@@ -6,9 +6,9 @@
   "data": "2026-10-28",
   "titlu": "Spinning dimineata · 3×6' zona 2 · 30 min",
   "obiectiv": "30 min inainte de munca, puls in zona 2 (117-137) in cel putin 80% din blocuri, cadenta 80-90 rpm.",
-  "nota_generala": "Spinning de dimineata, maxim 30 de minute, intensitate usoara (zona 2), nu inlocuieste alergarea. Porneste la rezistenta calibrata (30 daca nu exista calibrare); peste 137 scazi rezistenta cu 5, sub 117 dupa 2 minute urci cu 5. Cadenta 80-90 rpm, nu compensezi cu viteza.",
+  "nota_generala": "La SP1.2 (23.10) blocurile au stat 77% in Z2 (criteriul era 80%): blocul 1 doar 54%, pentru ca ai pornit cu puls 94 dupa o incalzire usoara; blocul 3 a atins 139. Acum incalzirea are 5 min si ultimul minut la rezistenta 30, ca blocul 1 sa porneasca cu puls ~100+. Blocuri la rezistenta 40 (calibrata 42), 80-90 rpm. Peste 137 scazi rezistenta cu 5, sub 117 dupa 2 minute urci cu 5. Maxim 30 de minute, nu inlocuieste alergarea.",
   "ritmuri": {
-    "lucru": "80-90 rpm, rezistența 25-35",
+    "lucru": "80-90 rpm, rezistența 35-45",
     "usor": "70-80 rpm, rezistența 15-20"
   },
   "praguri": {
@@ -29,8 +29,8 @@
     {
       "tip": "incalzire",
       "nume": "70-80 rpm · Incalzire usoara",
-      "durata": 240,
-      "nota": "rezistenta 15-20, puls sub 117",
+      "durata": 300,
+      "nota": "rezistenta 15-20, ultimul minut la 30",
       "tinte": {
         "cadenta_rpm": [
           70,
@@ -53,19 +53,19 @@
           "tip": "alt",
           "nume": "80-90 rpm · Bloc zona 2",
           "durata": 360,
-          "nota": "pornesti la rezistenta 30",
+          "nota": "pornesti la rezistenta 40",
           "tinte": {
             "cadenta_rpm": [
               80,
               90
             ],
             "rezistenta": [
-              25,
-              35
+              35,
+              45
             ],
             "putere_w": [
-              60,
-              110
+              70,
+              120
             ],
             "puls": [
               117,
@@ -98,7 +98,7 @@
     {
       "tip": "racire",
       "nume": "65-75 rpm · Racire",
-      "durata": 300,
+      "durata": 240,
       "nota": "rezistenta 10-15, pana pulsul scade sub 110",
       "tinte": {
         "cadenta_rpm": [
