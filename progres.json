@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generat_la": "2026-10-23T06:24:45+03:00",
-  "generat_de": "proceseaza.py",
+  "generat_la": "2026-10-23T06:28:13+03:00",
+  "generat_de": "claude",
   "sesiuni_aplicatie": 4,
   "sursa": {
     "strava_athlete_id": 28920338,
@@ -631,7 +631,8 @@
         "rezistenta_z2": 40,
         "secunde_z2": 1061
       }
-    ]
+    ],
+    "nota": "SP1.2 (23.10): Z2 77% in blocuri, cadenta 81-85 rpm, rezistenta Z2 = 40 (calibrata 42). Urmatorul: SP1.3 la rezistenta 40, incalzire 5 min."
   },
   "volum_aerob_combinat": {
     "total_h": 8.64,
