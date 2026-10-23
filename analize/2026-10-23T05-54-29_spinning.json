@@ -1,0 +1,53 @@
+{
+  "schema": "trainlive.analiza",
+  "schema_version": 1,
+  "id": "2026-10-23T05-54-29_spinning",
+  "creat_la": "2026-10-23T06:28:07+03:00",
+  "verdict": "partial",
+  "titlu": "SP1.2: 30 min complete, 8 din 8 pasi, Z2 77% in blocuri (tinta 80%), cadenta 79 rpm; rezistenta Z2 = 40.",
+  "praguri": [
+    {
+      "nume": "Blocuri complete",
+      "rezultat": "3 din 3",
+      "ok": true
+    },
+    {
+      "nume": "Puls in Z2 (117-137) in blocuri >= 80%",
+      "rezultat": "830 s din 1080 (76,9%)",
+      "ok": false
+    },
+    {
+      "nume": "Cadenta 80-90 rpm in blocuri",
+      "rezultat": "81 / 85 / 81 rpm",
+      "ok": true
+    },
+    {
+      "nume": "Puls sub 150 (alerta)",
+      "rezultat": "maxim 139",
+      "ok": true
+    },
+    {
+      "nume": "Durata totala 30 min",
+      "rezultat": "1804 s",
+      "ok": true
+    }
+  ],
+  "puncte_bune": [
+    "Toate cele 8 pasi completi, fara deconectari (ceas si bicicleta)",
+    "Cadenta 81-85 rpm in toate blocurile, rezistenta 39-41",
+    "Z2 total 1031 s (vs. 206 s pe 22.10), Z1+Z2 97,5%",
+    "Rezistenta Z2 = 40 din 1061 s (calibrare solida; calibrata 42)"
+  ],
+  "probleme": [
+    "Blocul 1: Z2 doar 194 s din 360 (54%), pornit cu puls 94; Z2 apare dupa ~6,6 min",
+    "Blocul 3: 12 s peste 137 (vf 139), usor sub control",
+    "Putere 107-112 W in blocuri, peste tinta 60-110 (tinta ajustata)",
+    "Pauzele 2 si 3: puls 130-132, peste tinta 90-130 (derivă, nu efort)"
+  ],
+  "sesiunea_urmatoare": {
+    "id": "SP1.3",
+    "fisier": "sesiuni/SP1.3.json",
+    "motiv": "Aceeasi structura la rezistenta 40; incalzire 5 min cu ultimul minut la 30 ca blocul 1 sa porneasca mai sus."
+  },
+  "progres_headline_pct": 3.2
+}
