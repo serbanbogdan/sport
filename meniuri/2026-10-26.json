@@ -2,17 +2,33 @@
   "schema": "nutritie.meniu",
   "v": 1,
   "saptamana": "2026-10-26",
-  "creat": "2026-10-22T21:05:00+03:00",
+  "creat": "2026-10-25T15:10:00+02:00",
   "sursa": "claude",
-  "alimente_acasa": ["motarela light", "humus", "masline", "salată bacio", "roșii cherry", "castraveți", "ardei", "ceriale", "lapte", "avocado", "ton"],
-  "note": "Meniu construit pe alimentele tale din casă (motarela light, humus, ton, avocado, ceriale, legume). Porții mici, fără sare adăugată; masline și humus doar în cantități mici, pentru că sunt sărate. Săptămâna are 2 zile cu ton, 2 cu motarela și o zi cu hibiscus (avertisment, vezi ceaiul).",
+  "alimente_acasa": [
+    "motarela light",
+    "humus",
+    "masline",
+    "salată bacio",
+    "roșii cherry",
+    "castraveți",
+    "ardei",
+    "ceriale",
+    "lapte",
+    "avocado",
+    "ton"
+  ],
+  "note": "Meniu pentru 26–30 octombrie, ajustat după dorințele tale: gustări cu pară, măr, banană și chefir, prânz de marți cu pui, orez și ardei copt, joi mic dejun cu zacuscă. Porții mici, fără sare adăugată; ton, humus, motarela și zacusca au sare, de aceea porțiile sunt mici.",
   "zile": [
     {
       "data": "2026-10-26",
       "zi": "Luni",
       "mic_dejun": {
         "nume": "Ceriale cu lapte și măr",
-        "ingrediente": ["ceriale nezaharisite 50 g", "lapte 1,5% 200 ml", "½ măr tăiat"],
+        "ingrediente": [
+          "ceriale nezaharisite 50 g",
+          "lapte 1,5% 200 ml",
+          "½ măr tăiat"
+        ],
         "portie": "1 castron mic",
         "kcal": 340,
         "sodiu_mg": 120,
@@ -20,16 +36,28 @@
         "nota": "Alege ceriale cu sub 0,3 g sare la 100 g (citește eticheta); evită cele cu miere sau ciocolată."
       },
       "gustare_dimineata": {
-        "nume": "Castraveți și ardei crud",
-        "ingrediente": ["castraveți 150 g", "ardei gras 100 g"],
-        "portie": "o farfurioară",
-        "kcal": 50,
-        "sodiu_mg": 5,
-        "pregatire": "Tai în bastonașe, la rece, cu puțină lămâie."
+        "nume": "Pară și măr",
+        "ingrediente": [
+          "1 pară mică",
+          "1 măr mic"
+        ],
+        "portie": "1 pară + 1 măr",
+        "kcal": 140,
+        "sodiu_mg": 2
       },
       "pranz": {
         "nume": "Salată cu ton, avocado și roșii cherry",
-        "ingrediente": ["ton fără sare adăugată 80 g (scurs)", "avocado 40 g", "roșii cherry 100 g", "castraveți 80 g", "salată bacio 60 g", "pâine integrală 50 g", "ulei de măsline 1 linguriță", "lămâie", "piper"],
+        "ingrediente": [
+          "ton fără sare adăugată 80 g (scurs)",
+          "avocado 40 g",
+          "roșii cherry 100 g",
+          "castraveți 80 g",
+          "salată bacio 60 g",
+          "pâine integrală 50 g",
+          "ulei de măsline 1 linguriță",
+          "lămâie",
+          "piper"
+        ],
         "portie": "1 caserolă mică",
         "kcal": 400,
         "sodiu_mg": 190,
@@ -37,11 +65,13 @@
         "nota": "Se mănâncă rece, la serviciu. Verifică la ton să scrie «fără sare adăugată»."
       },
       "gustare_dupamasa": {
-        "nume": "Măr și migdale",
-        "ingrediente": ["1 măr mic", "6 migdale nesărate"],
-        "portie": "1 măr + 6 migdale",
-        "kcal": 120,
-        "sodiu_mg": 1
+        "nume": "Chefir",
+        "ingrediente": [
+          "chefir 200 ml"
+        ],
+        "portie": "1 pahar",
+        "kcal": 85,
+        "sodiu_mg": 80
       },
       "ceai": {
         "nume": "Mușețel",
@@ -54,7 +84,14 @@
       "zi": "Marți",
       "mic_dejun": {
         "nume": "Tartină cu avocado, roșii cherry și ou fiert",
-        "ingrediente": ["1 felie de pâine integrală 30 g", "avocado 40 g", "roșii cherry 60 g", "1 ou fiert", "lămâie", "piper"],
+        "ingrediente": [
+          "1 felie de pâine integrală 30 g",
+          "avocado 40 g",
+          "roșii cherry 60 g",
+          "1 ou fiert",
+          "lămâie",
+          "piper"
+        ],
         "portie": "1 tartină + 1 ou",
         "kcal": 350,
         "sodiu_mg": 220,
@@ -63,23 +100,37 @@
       },
       "gustare_dimineata": {
         "nume": "Măr",
-        "ingrediente": ["1 măr mic"],
+        "ingrediente": [
+          "1 măr mic"
+        ],
         "portie": "1 măr",
         "kcal": 80,
         "sodiu_mg": 1
       },
       "pranz": {
-        "nume": "Ardei copt cu orez integral și humus",
-        "ingrediente": ["ardei gras copt 150 g", "orez integral fiert 80 g", "humus 40 g", "roșii cherry 60 g", "semințe de dovleac 10 g", "cimbru", "lămâie", "ulei de măsline 1 linguriță"],
-        "portie": "1 ardei umplut",
-        "kcal": 355,
-        "sodiu_mg": 140,
-        "pregatire": "Tai ardeiul în jumătate, scoți semințele, îl coci 15 min la cuptor. Orezul îl amesteci cu humus, roșiile tăiate, cimbru și lămâie; umpli ardeiul și presari semințele.",
-        "nota": "Dacă humusul e din magazin, citește eticheta (sub 0,3 g sare la 100 g)."
+        "nume": "Pui cu orez și salată de ardei copt",
+        "ingrediente": [
+          "piept de pui 120 g",
+          "orez fiert 100 g",
+          "ardei gras copt 200 g",
+          "roșii cherry 50 g",
+          "usturoi",
+          "pătrunjel",
+          "lămâie",
+          "ulei de măsline 1 lingură"
+        ],
+        "portie": "1 caserolă mică",
+        "kcal": 420,
+        "sodiu_mg": 110,
+        "pregatire": "Puiul se coace sau se călește la tigaie cu usturoi, fără sare. Ardeii copți se curăță de coajă și se taie fâșii, cu ulei, lămâie și pătrunjel. Orezul se fierbe fără sare.",
+        "nota": "Se mănâncă și rece, la serviciu."
       },
       "gustare_dupamasa": {
         "nume": "Castraveți cu humus",
-        "ingrediente": ["castraveți 150 g", "humus 40 g"],
+        "ingrediente": [
+          "castraveți 150 g",
+          "humus 40 g"
+        ],
         "portie": "1 farfurioară",
         "kcal": 125,
         "sodiu_mg": 140,
@@ -96,35 +147,56 @@
       "zi": "Miercuri",
       "mic_dejun": {
         "nume": "Pâine cu humus, castraveți și ardei",
-        "ingrediente": ["1 felie de pâine integrală 30 g", "humus 40 g", "castraveți 80 g", "ardei gras 50 g", "piper", "pătrunjel"],
+        "ingrediente": [
+          "1 felie de pâine integrală 30 g",
+          "humus 40 g",
+          "castraveți 80 g",
+          "ardei gras 50 g",
+          "piper",
+          "pătrunjel"
+        ],
         "portie": "1 sandviș deschis",
         "kcal": 300,
         "sodiu_mg": 260,
         "pregatire": "Întinzi humusul pe felie, peste pui castraveții și ardeiul tăiate subțire. Piper și pătrunjel."
       },
       "gustare_dimineata": {
-        "nume": "Portocală",
-        "ingrediente": ["1 portocală"],
-        "portie": "1 portocală",
-        "kcal": 70,
-        "sodiu_mg": 1
+        "nume": "Banană",
+        "ingrediente": [
+          "1 banană mică"
+        ],
+        "portie": "1 banană",
+        "kcal": 90,
+        "sodiu_mg": 1,
+        "nota": "Bogată în potasiu."
       },
       "pranz": {
         "nume": "Pui cu motarela light, ardei și salată",
-        "ingrediente": ["piept de pui 100 g", "motarela light 30 g", "ardei gras 100 g", "roșii cherry 80 g", "salată bacio 40 g", "orez integral fiert 80 g", "usturoi", "busuioc", "ulei de măsline 1 linguriță"],
+        "ingrediente": [
+          "piept de pui 100 g",
+          "motarela light 30 g",
+          "ardei gras 100 g",
+          "roșii cherry 80 g",
+          "salată bacio 40 g",
+          "usturoi",
+          "busuioc",
+          "ulei de măsline 1 linguriță"
+        ],
         "portie": "1 caserolă mică",
-        "kcal": 395,
-        "sodiu_mg": 245,
+        "kcal": 305,
+        "sodiu_mg": 240,
         "pregatire": "Puiul îl tai cubulețe și îl prăjești scurt cu usturoi și puțin ulei. Adaugi ardeiul tăiat, la final motarela light mărunțită, să se topească ușor. Pui peste salată și orez, cu busuioc.",
         "nota": "Motarela light are sare, deci porția rămâne mică. Fără sos sărat."
       },
       "gustare_dupamasa": {
-        "nume": "Roșii cherry cu măsline",
-        "ingrediente": ["roșii cherry 150 g", "5 măsline verzi", "migdale nesărate 10 g"],
-        "portie": "o mână de roșii + 5 măsline + 10 g migdale",
-        "kcal": 140,
-        "sodiu_mg": 150,
-        "nota": "Măslinele sunt sărate: nu mai pune altă sare pe roșii."
+        "nume": "Legume",
+        "ingrediente": [
+          "legume proaspete (morcovi) 150 g"
+        ],
+        "portie": "1 porție",
+        "kcal": 50,
+        "sodiu_mg": 50,
+        "pregatire": "Le pregătești tu."
       },
       "ceai": {
         "nume": "Rooibos cu scorțișoară",
@@ -136,24 +208,40 @@
       "data": "2026-10-29",
       "zi": "Joi",
       "mic_dejun": {
-        "nume": "Ovăz fiert în lapte cu măr",
-        "ingrediente": ["fulgi de ovăz 40 g", "lapte 1,5% 150 ml", "½ măr ras", "nuci 10 g", "scorțișoară"],
-        "portie": "1 castron mic",
-        "kcal": 375,
-        "sodiu_mg": 65,
-        "pregatire": "Fierbi ovăzul în lapte 5 minute, adaugi mărul ras și scorțișoara. Fără zahăr.",
-        "nota": "Dacă vrei dulce, adaugă fructe, nu zahăr."
+        "nume": "Pâine prăjită cu zacuscă și ou",
+        "ingrediente": [
+          "2 felii de pâine integrală 60 g",
+          "zacuscă 30 g",
+          "1 ou fiert"
+        ],
+        "portie": "2 felii + 1 ou",
+        "kcal": 270,
+        "sodiu_mg": 480,
+        "pregatire": "Prăjești feliile, întinzi zacusca, oul fiert alături. Fără sare.",
+        "nota": "Zacusca din magazin are sare: citește eticheta și ține porția la 30 g."
       },
       "gustare_dimineata": {
-        "nume": "Kiwi",
-        "ingrediente": ["1 kiwi"],
-        "portie": "1 kiwi",
-        "kcal": 45,
+        "nume": "Kiwi și nuci",
+        "ingrediente": [
+          "1 kiwi",
+          "nuci 15 g"
+        ],
+        "portie": "1 kiwi + nuci",
+        "kcal": 145,
         "sodiu_mg": 3
       },
       "pranz": {
         "nume": "Paste integrale cu ton și roșii",
-        "ingrediente": ["paste integrale 70 g (uscate)", "ton fără sare adăugată 80 g (scurs)", "roșii cherry 100 g", "ardei gras 80 g", "usturoi", "busuioc", "ulei de măsline 1 linguriță", "lămâie"],
+        "ingrediente": [
+          "paste integrale 70 g (uscate)",
+          "ton fără sare adăugată 80 g (scurs)",
+          "roșii cherry 100 g",
+          "ardei gras 80 g",
+          "usturoi",
+          "busuioc",
+          "ulei de măsline 1 linguriță",
+          "lămâie"
+        ],
         "portie": "1 caserolă mică",
         "kcal": 415,
         "sodiu_mg": 60,
@@ -162,7 +250,10 @@
       },
       "gustare_dupamasa": {
         "nume": "Ardei crud cu humus",
-        "ingrediente": ["ardei gras 150 g", "humus 40 g"],
+        "ingrediente": [
+          "ardei gras 150 g",
+          "humus 40 g"
+        ],
         "portie": "1 farfurioară",
         "kcal": 120,
         "sodiu_mg": 140,
@@ -179,7 +270,14 @@
       "zi": "Vineri",
       "mic_dejun": {
         "nume": "Omletă cu ardei și roșii cherry",
-        "ingrediente": ["2 ouă", "ardei gras 60 g", "roșii cherry 60 g", "1 felie de pâine integrală 30 g", "ulei de măsline 1 linguriță", "piper"],
+        "ingrediente": [
+          "2 ouă",
+          "ardei gras 60 g",
+          "roșii cherry 60 g",
+          "1 felie de pâine integrală 30 g",
+          "ulei de măsline 1 linguriță",
+          "piper"
+        ],
         "portie": "1 farfurie mică",
         "kcal": 340,
         "sodiu_mg": 290,
@@ -188,14 +286,25 @@
       },
       "gustare_dimineata": {
         "nume": "Măr",
-        "ingrediente": ["1 măr mic"],
+        "ingrediente": [
+          "1 măr mic"
+        ],
         "portie": "1 măr",
         "kcal": 80,
         "sodiu_mg": 1
       },
       "pranz": {
         "nume": "Salată de linte cu motarela light",
-        "ingrediente": ["linte fiartă 120 g", "motarela light 30 g", "castraveți 100 g", "ardei gras 80 g", "salată bacio 50 g", "oțet de mere", "ulei de măsline 1 linguriță", "pătrunjel"],
+        "ingrediente": [
+          "linte fiartă 120 g",
+          "motarela light 30 g",
+          "castraveți 100 g",
+          "ardei gras 80 g",
+          "salată bacio 50 g",
+          "oțet de mere",
+          "ulei de măsline 1 linguriță",
+          "pătrunjel"
+        ],
         "portie": "1 caserolă mică",
         "kcal": 400,
         "sodiu_mg": 200,
@@ -204,7 +313,9 @@
       },
       "gustare_dupamasa": {
         "nume": "Pară",
-        "ingrediente": ["1 pară medie"],
+        "ingrediente": [
+          "1 pară medie"
+        ],
         "portie": "1 pară",
         "kcal": 90,
         "sodiu_mg": 2
@@ -217,27 +328,111 @@
     }
   ],
   "cumparaturi": [
-    {"produs": "Pâine integrală (felii)", "cantitate": "1 pachet", "magazin": "Lidl"},
-    {"produs": "Ouă", "cantitate": "3 buc.", "magazin": "Lidl"},
-    {"produs": "Fulgi de ovăz", "cantitate": "100 g", "magazin": "Lidl"},
-    {"produs": "Piept de pui", "cantitate": "150 g", "magazin": "Lidl"},
-    {"produs": "Mere", "cantitate": "4 buc.", "magazin": "Lidl"},
-    {"produs": "Portocale", "cantitate": "1 buc.", "magazin": "Lidl"},
-    {"produs": "Kiwi", "cantitate": "1 buc.", "magazin": "Lidl"},
-    {"produs": "Pere", "cantitate": "1 buc.", "magazin": "Lidl"},
-    {"produs": "Lămâi", "cantitate": "2 buc.", "magazin": "Lidl"},
-    {"produs": "Castraveți (completare)", "cantitate": "3 buc.", "magazin": "Lidl"},
-    {"produs": "Ardei gras (completare)", "cantitate": "3 buc.", "magazin": "Lidl"},
-    {"produs": "Roșii cherry (completare)", "cantitate": "250 g", "magazin": "Lidl"},
-    {"produs": "Orez integral", "cantitate": "500 g", "magazin": "Kaufland"},
-    {"produs": "Linte uscată", "cantitate": "150 g", "magazin": "Kaufland"},
-    {"produs": "Paste integrale", "cantitate": "500 g", "magazin": "Kaufland"},
-    {"produs": "Migdale nesărate", "cantitate": "30 g", "magazin": "Kaufland"},
-    {"produs": "Semințe de dovleac", "cantitate": "20 g", "magazin": "Kaufland"},
-    {"produs": "Nuci decojite, nesărate", "cantitate": "30 g", "magazin": "Kaufland"},
-    {"produs": "Ceai mușețel, hibiscus cu măceșe, rooibos, tei, mentă uscată", "cantitate": "câte un plic", "magazin": "Kaufland"},
-    {"produs": "Motarela light, ton, humus, măsline, salată bacio, avocado, lapte, ceriale, roșii cherry", "cantitate": "verifică: ajung pentru săptămână? (2 porții ton, 2 motarela, 3 humus, 5 măsline)", "magazin": "Acasă"},
-    {"produs": "Ulei de măsline, usturoi, busuioc, pătrunjel, oțet de mere, scorțișoară, piper, cimbru", "cantitate": "dacă ai deja", "magazin": "Acasă"}
+    {
+      "produs": "Pâine integrală (felii)",
+      "cantitate": "1 pachet",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Kiwi",
+      "cantitate": "1 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Lămâi",
+      "cantitate": "2 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Castraveți (completare)",
+      "cantitate": "3 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Ardei gras (completare)",
+      "cantitate": "3 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Roșii cherry (completare)",
+      "cantitate": "250 g",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Linte uscată",
+      "cantitate": "150 g",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Paste integrale",
+      "cantitate": "500 g",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Ceai mușețel, hibiscus cu măceșe, rooibos, tei, mentă uscată",
+      "cantitate": "câte un plic",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Motarela light, ton, humus, măsline, salată bacio, avocado, lapte, ceriale, roșii cherry",
+      "cantitate": "verifică: ajung pentru săptămână? (2 porții ton, 2 motarela, 3 humus, 5 măsline)",
+      "magazin": "Acasă"
+    },
+    {
+      "produs": "Ulei de măsline, usturoi, busuioc, pătrunjel, oțet de mere, scorțișoară, piper, cimbru",
+      "cantitate": "dacă ai deja",
+      "magazin": "Acasă"
+    },
+    {
+      "produs": "Ouă",
+      "cantitate": "4 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Piept de pui",
+      "cantitate": "250 g",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Mere",
+      "cantitate": "4 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Pere",
+      "cantitate": "2 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Banane",
+      "cantitate": "1 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Morcovi",
+      "cantitate": "3 buc.",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Chefir",
+      "cantitate": "1 pahar de 200 ml",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Zacuscă",
+      "cantitate": "1 borcan mic (alege una cu puțină sare)",
+      "magazin": "Lidl"
+    },
+    {
+      "produs": "Orez alb",
+      "cantitate": "100 g",
+      "magazin": "Kaufland"
+    },
+    {
+      "produs": "Nuci decojite, nesărate",
+      "cantitate": "15 g",
+      "magazin": "Kaufland"
+    }
   ],
   "sfaturi": [
     "Nu pune sare la gătit: lămâie, usturoi, ierburi și piper dau gust.",
