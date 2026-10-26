@@ -1,7 +1,7 @@
 {
   "schema": "trainlive.rezultate",
   "schema_version": 1,
-  "actualizat_la": "2026-10-26T06:16:55+02:00",
+  "actualizat_la": "2026-10-26T19:23:43+02:00",
   "sesiuni": [
     {
       "id": "2026-10-20T18-10-51_alergare",
@@ -89,6 +89,24 @@
       "kcal": 37,
       "cel_mai_lung_bloc_alergare_s": null,
       "putere_medie_w": 86,
+      "analiza": null,
+      "analizat": false,
+      "verdict": null
+    },
+    {
+      "id": "2026-10-26T18-48-29_spinning",
+      "activitate": "spinning",
+      "start": "2026-10-26T18:48:29+02:00",
+      "data": "2026-10-26",
+      "plan_id": "SP1.8",
+      "fisier": "sesiuni/2026/10/2026-10-26T18-48-29_spinning.json",
+      "durata_s": 2099,
+      "distanta_m": 17583,
+      "puls_mediu": 139,
+      "puls_max": 162,
+      "kcal": 44,
+      "cel_mai_lung_bloc_alergare_s": null,
+      "putere_medie_w": 87,
       "analiza": null,
       "analizat": false,
       "verdict": null
