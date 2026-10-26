@@ -1,9 +1,9 @@
 {
   "schema": "trainlive.planuri",
   "schema_version": 1,
-  "actualizat_la": "2026-10-26T18:50:00+02:00",
+  "actualizat_la": "2026-10-26T18:46:59+02:00",
   "urmatoarea": {
-    "alergare": null,
+    "alergare": "S1.12",
     "spinning": "SP1.8"
   },
   "sesiuni": [
@@ -116,6 +116,46 @@
       "status": "planificat",
       "rezultat_id": null,
       "durata_s": 2280
+    },
+    {
+      "id": "S1.12",
+      "activitate": "alergare",
+      "data": "2026-10-27",
+      "titlu": "Proba + 4×(2' alergat / 3' mers)",
+      "fisier": "sesiuni/S1.12.json",
+      "status": "planificat",
+      "rezultat_id": null,
+      "durata_s": 2325
+    },
+    {
+      "id": "S1.13",
+      "activitate": "alergare",
+      "data": "2026-10-29",
+      "titlu": "Proba + 4×(2' alergat / 3' mers)",
+      "fisier": "sesiuni/S1.13.json",
+      "status": "planificat",
+      "rezultat_id": null,
+      "durata_s": 2325
+    },
+    {
+      "id": "S1.14",
+      "activitate": "alergare",
+      "data": "2026-11-03",
+      "titlu": "Proba + 4×(2'10\" alergat / 3' mers)",
+      "fisier": "sesiuni/S1.14.json",
+      "status": "planificat",
+      "rezultat_id": null,
+      "durata_s": 2365
+    },
+    {
+      "id": "S1.15",
+      "activitate": "alergare",
+      "data": "2026-11-05",
+      "titlu": "Proba + 4×(2'10\" alergat / 3' mers)",
+      "fisier": "sesiuni/S1.15.json",
+      "status": "planificat",
+      "rezultat_id": null,
+      "durata_s": 2365
     }
   ]
 }
