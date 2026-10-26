@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generat_la": "2026-10-23T11:33:13+03:00",
+  "generat_la": "2026-10-26T06:16:55+02:00",
   "generat_de": "proceseaza.py",
-  "sesiuni_aplicatie": 4,
+  "sesiuni_aplicatie": 5,
   "sursa": {
     "strava_athlete_id": 28920338,
     "ultima_activitate_strava_id": "20621071322",
@@ -537,65 +537,72 @@
     "nota": "Repetare cu o singura corectie: controlul ritmului (proba 8:00/km, blocuri 7:30-8:00, sub 7:30 incetinesti). Blocul 4x120 s nu creste pana nu se confirma varful sub 155 la ritm corect."
   },
   "urmatoarea_sesiune_spinning": {
-    "cod": "SP1.3",
+    "cod": "SP1.4",
     "tip_activitate": "spinning",
-    "fisier_plan": "sesiuni/SP1.3.json",
-    "data_planificata": "2026-10-26",
+    "fisier_plan": "sesiuni/SP1.4.json",
+    "data_planificata": "2026-10-27",
     "titlu": "Spinning dimineata · 3×6' zona 2 · 30 min",
     "durata_planificata_s": 1800
   },
   "spinning": {
     "totaluri": {
-      "sesiuni": 2,
-      "timp_total_s": 3606,
-      "timp_total_h": 1.0,
-      "distanta_totala_km": 29.36,
-      "kcal_total": 73,
-      "echivalent_alergare_min": 12.7,
+      "sesiuni": 3,
+      "timp_total_s": 5410,
+      "timp_total_h": 1.5,
+      "distanta_totala_km": 44.38,
+      "kcal_total": 110,
+      "echivalent_alergare_min": 24.2,
       "echivalent_alergare_definitie": "echivalent_alergare_min = minute de spinning cu puls in Z2 × 0,6 (estimare, nu masuratoare)"
     },
-    "rezistenta_z2_calibrata": 42,
+    "rezistenta_z2_calibrata": 40,
     "rezistenta_z2_definitie": "rezistenta_z2 a unei sesiuni = mediana rezistentei in secundele cu puls in Z2 (inclusiv capetele) si cadenta > 50 rpm; null daca sunt sub 120 de astfel de secunde. rezistenta_z2_calibrata = mediana ultimelor 3 valori nenule (null = necalibrat, niciodata 0)",
     "ultima_sesiune": {
-      "id": "2026-10-23T05-54-29_spinning",
-      "data": "2026-10-23",
+      "id": "2026-10-26T05-46-36_spinning",
+      "data": "2026-10-26",
       "durata_s": 1804,
-      "distanta_km": 15.26,
-      "putere_medie_w": 89,
-      "cadenta_medie_rpm": 79,
+      "distanta_km": 15.02,
+      "putere_medie_w": 86,
+      "cadenta_medie_rpm": 78,
       "rezistenta_medie": 30,
-      "puls_mediu": 118,
-      "kcal": 38,
+      "puls_mediu": 121,
+      "kcal": 37,
       "rezistenta_z2": 40
     },
     "tendinte": {
       "etichete_date": [
         "2026-10-22",
-        "2026-10-23"
+        "2026-10-23",
+        "2026-10-26"
       ],
       "rezistenta_z2": [
         43,
+        40,
         40
       ],
       "putere_medie_w": [
         81,
-        89
+        89,
+        86
       ],
       "cadenta_medie_rpm": [
         73,
-        79
+        79,
+        78
       ],
       "rezistenta_medie": [
         32,
+        30,
         30
       ],
       "kcal": [
         35,
-        38
+        38,
+        37
       ],
       "puls_mediu": [
         104,
-        118
+        118,
+        121
       ]
     },
     "sesiuni": [
@@ -630,14 +637,30 @@
         "puls_max": 139,
         "rezistenta_z2": 40,
         "secunde_z2": 1061
+      },
+      {
+        "id": "2026-10-26T05-46-36_spinning",
+        "data": "2026-10-26",
+        "plan_id": "SP1.3",
+        "durata_s": 1804,
+        "timp_in_miscare_s": 1804,
+        "distanta_km": 15.02,
+        "kcal": 37,
+        "putere_medie_w": 86,
+        "cadenta_medie_rpm": 78,
+        "rezistenta_medie": 30,
+        "puls_mediu": 121,
+        "puls_max": 140,
+        "rezistenta_z2": 40,
+        "secunde_z2": 1152
       }
     ]
   },
   "volum_aerob_combinat": {
-    "total_h": 8.64,
-    "spinning_pct": 11.6,
+    "total_h": 9.14,
+    "spinning_pct": 16.4,
     "alergare_s": 27483,
-    "spinning_s": 3606,
+    "spinning_s": 5410,
     "definitie": "alergare_s = totaluri.timp_in_miscare_total_s; spinning_s = suma timp_in_miscare_s din spinning.sesiuni; total_h = (alergare_s + spinning_s) / 3600; spinning_pct = spinning_s / total × 100"
   }
 }
