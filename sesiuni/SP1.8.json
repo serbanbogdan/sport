@@ -1,0 +1,120 @@
+{
+  "schema_version": 2,
+  "versiune": 1,
+  "id": "SP1.8",
+  "sesiune": "SP1.8",
+  "activitate": "spinning",
+  "data": "2026-10-26",
+  "titlu": "Spinning seara · 4×6' zona 2 · 38 min",
+  "obiectiv": "4 blocuri de 6 minute cu puls 117-137 in cel putin 80% din timp, cadenta medie in blocuri 85-90 rpm.",
+  "nota_generala": "Inlocuieste alergarea de azi, anulata de ploaie. La SP1.3 (azi, 05:46, 30 min) cadenta medie a fost 78 rpm, sub tinta de 80-90, la rezistenta medie 30, iar pulsul mediu 121. Azi blocurile stau la rezistenta 40 (R_Z2 calibrata 42), cu accent pe 85-90 rpm: daca pulsul trece de 137 scazi rezistenta cu 5, nu cadenta. 4 blocuri in loc de 3, tot de 6 minute, cu 1 minut usor intre ele. Alerta la 150: scazi rezistenta cu 10. Nu inlocuieste progresul spre 10 km.",
+  "ritmuri": {
+    "lucru": "85-90 rpm, rezistenta 35-45",
+    "usor": "70-80 rpm, rezistenta 15-20"
+  },
+  "praguri": {
+    "puls_alerta": 150,
+    "zona_lucru": [
+      117,
+      137
+    ],
+    "puls_max": 195
+  },
+  "criterii_reusita": [
+    "4 din 4 blocuri de 6 minute complete",
+    "puls in 117-137 cel putin 80% din timpul blocurilor",
+    "cadenta medie 85-90 rpm in blocuri",
+    "durata totala 38 min"
+  ],
+  "pasi": [
+    {
+      "tip": "incalzire",
+      "nume": "70-80 rpm · Incalzire usoara",
+      "durata": 300,
+      "nota": "rezistenta 15-20, ultimul minut la 30",
+      "tinte": {
+        "cadenta_rpm": [
+          70,
+          80
+        ],
+        "rezistenta": [
+          15,
+          20
+        ],
+        "puls": [
+          90,
+          117
+        ]
+      }
+    },
+    {
+      "repeta": 4,
+      "pasi": [
+        {
+          "tip": "alt",
+          "nume": "85-90 rpm · Bloc zona 2",
+          "durata": 360,
+          "nota": "pornesti la rezistenta 40",
+          "tinte": {
+            "cadenta_rpm": [
+              85,
+              90
+            ],
+            "rezistenta": [
+              35,
+              45
+            ],
+            "putere_w": [
+              70,
+              120
+            ],
+            "puls": [
+              117,
+              137
+            ]
+          }
+        },
+        {
+          "tip": "pauza",
+          "nume": "70-80 rpm · Pedalat usor",
+          "durata": 60,
+          "nota": "rezistenta 15-20",
+          "tinte": {
+            "cadenta_rpm": [
+              70,
+              80
+            ],
+            "rezistenta": [
+              15,
+              20
+            ],
+            "puls": [
+              90,
+              130
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "tip": "racire",
+      "nume": "65-75 rpm · Racire",
+      "durata": 300,
+      "nota": "rezistenta 10-15, pana pulsul scade sub 110",
+      "tinte": {
+        "cadenta_rpm": [
+          65,
+          75
+        ],
+        "rezistenta": [
+          10,
+          15
+        ],
+        "puls": [
+          80,
+          117
+        ]
+      }
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 {
   "schema": "trainlive.planuri",
   "schema_version": 1,
-  "actualizat_la": "2026-10-26T06:16:55+02:00",
+  "actualizat_la": "2026-10-26T18:45:00+02:00",
   "urmatoarea": {
     "alergare": "S1.11",
-    "spinning": "SP1.4"
+    "spinning": "SP1.8"
   },
   "sesiuni": [
     {
@@ -106,6 +106,16 @@
       "status": "planificat",
       "rezultat_id": null,
       "durata_s": 1800
+    },
+    {
+      "id": "SP1.8",
+      "activitate": "spinning",
+      "data": "2026-10-26",
+      "titlu": "Spinning seara · 4×6' zona 2 · 38 min",
+      "fisier": "sesiuni/SP1.8.json",
+      "status": "planificat",
+      "rezultat_id": null,
+      "durata_s": 2280
     }
   ]
 }
