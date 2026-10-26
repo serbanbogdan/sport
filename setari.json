@@ -1,1 +1,12 @@
-{"schema": "nutritie.setari", "v": 1, "actualizat": "2026-10-22T20:49:38+03:00", "excluse": ["Sardine", "Ficat"], "favorite": []}
+{
+  "schema": "nutritie.setari",
+  "v": 1,
+  "actualizat": "2026-10-26T06:41:23+02:00",
+  "excluse": [
+    "Sardine",
+    "Ficat"
+  ],
+  "favorite": [
+    "Ceriale cu lapte și măr"
+  ]
+}
