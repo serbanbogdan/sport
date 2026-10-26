@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generat_la": "2026-10-26T18:47:08+02:00",
+  "generat_la": "2026-10-26T19:23:43+02:00",
   "generat_de": "proceseaza.py",
-  "sesiuni_aplicatie": 5,
+  "sesiuni_aplicatie": 6,
   "sursa": {
     "strava_athlete_id": 28920338,
     "ultima_activitate_strava_id": "20621071322",
@@ -492,12 +492,16 @@
     }
   ],
   "urmatoarea_sesiune": {
-    "cod": "SP1.8",
-    "tip_activitate": "spinning",
-    "fisier_plan": "sesiuni/SP1.8.json",
-    "data_planificata": "2026-10-26",
-    "titlu": "Spinning seara · 4×6' zona 2 · 38 min",
-    "durata_planificata_s": 2280
+    "cod": "S1.12",
+    "tip_activitate": "alergare",
+    "titlu": "Proba + 4×(2' alergat / 3' mers)",
+    "data_planificata": "2026-10-27",
+    "fisier_plan": "sesiuni/S1.12.json",
+    "durata_planificata_s": 2325,
+    "alergare_planificata_s": 540,
+    "bloc_continuu_planificat_s": 120,
+    "procent_headline_dupa_executie_corecta": 3.2,
+    "nota": "Repetare cu o singura corectie: controlul ritmului (proba 8:00/km, blocuri 7:30-8:00)."
   },
   "echipament": {
     "incaltaminte": [],
@@ -533,72 +537,79 @@
     "nota": "Repetare cu o singura corectie: controlul ritmului (proba 8:00/km, blocuri 7:30-8:00)."
   },
   "urmatoarea_sesiune_spinning": {
-    "cod": "SP1.8",
+    "cod": "SP1.4",
     "tip_activitate": "spinning",
-    "fisier_plan": "sesiuni/SP1.8.json",
-    "data_planificata": "2026-10-26",
-    "titlu": "Spinning seara · 4×6' zona 2 · 38 min",
-    "durata_planificata_s": 2280
+    "fisier_plan": "sesiuni/SP1.4.json",
+    "data_planificata": "2026-10-27",
+    "titlu": "Spinning dimineata · 3×6' zona 2 · 30 min",
+    "durata_planificata_s": 1800
   },
   "spinning": {
     "totaluri": {
-      "sesiuni": 3,
-      "timp_total_s": 5410,
-      "timp_total_h": 1.5,
-      "distanta_totala_km": 44.38,
-      "kcal_total": 110,
-      "echivalent_alergare_min": 24.2,
+      "sesiuni": 4,
+      "timp_total_s": 7507,
+      "timp_total_h": 2.09,
+      "distanta_totala_km": 61.96,
+      "kcal_total": 154,
+      "echivalent_alergare_min": 26.0,
       "echivalent_alergare_definitie": "echivalent_alergare_min = minute de spinning cu puls in Z2 × 0,6 (estimare, nu masuratoare)"
     },
     "rezistenta_z2_calibrata": 40,
     "rezistenta_z2_definitie": "rezistenta_z2 a unei sesiuni = mediana rezistentei in secundele cu puls in Z2 (inclusiv capetele) si cadenta > 50 rpm; null daca sunt sub 120 de astfel de secunde. rezistenta_z2_calibrata = mediana ultimelor 3 valori nenule (null = necalibrat, niciodata 0)",
     "ultima_sesiune": {
-      "id": "2026-10-26T05-46-36_spinning",
+      "id": "2026-10-26T18-48-29_spinning",
       "data": "2026-10-26",
-      "durata_s": 1804,
-      "distanta_km": 15.02,
-      "putere_medie_w": 86,
+      "durata_s": 2099,
+      "distanta_km": 17.58,
+      "putere_medie_w": 87,
       "cadenta_medie_rpm": 78,
-      "rezistenta_medie": 30,
-      "puls_mediu": 121,
-      "kcal": 37,
-      "rezistenta_z2": 40
+      "rezistenta_medie": 31,
+      "puls_mediu": 139,
+      "kcal": 44,
+      "rezistenta_z2": 18
     },
     "tendinte": {
       "etichete_date": [
         "2026-10-22",
         "2026-10-23",
+        "2026-10-26",
         "2026-10-26"
       ],
       "rezistenta_z2": [
         43,
         40,
-        40
+        40,
+        18
       ],
       "putere_medie_w": [
         81,
         89,
-        86
+        86,
+        87
       ],
       "cadenta_medie_rpm": [
         73,
         79,
+        78,
         78
       ],
       "rezistenta_medie": [
         32,
         30,
-        30
+        30,
+        31
       ],
       "kcal": [
         35,
         38,
-        37
+        37,
+        44
       ],
       "puls_mediu": [
         104,
         118,
-        121
+        121,
+        139
       ]
     },
     "sesiuni": [
@@ -649,14 +660,30 @@
         "puls_max": 140,
         "rezistenta_z2": 40,
         "secunde_z2": 1152
+      },
+      {
+        "id": "2026-10-26T18-48-29_spinning",
+        "data": "2026-10-26",
+        "plan_id": "SP1.8",
+        "durata_s": 2099,
+        "timp_in_miscare_s": 2097,
+        "distanta_km": 17.58,
+        "kcal": 44,
+        "putere_medie_w": 87,
+        "cadenta_medie_rpm": 78,
+        "rezistenta_medie": 31,
+        "puls_mediu": 139,
+        "puls_max": 162,
+        "rezistenta_z2": 18,
+        "secunde_z2": 178
       }
     ]
   },
   "volum_aerob_combinat": {
-    "total_h": 9.14,
-    "spinning_pct": 16.4,
+    "total_h": 9.72,
+    "spinning_pct": 21.5,
     "alergare_s": 27483,
-    "spinning_s": 5410,
+    "spinning_s": 7507,
     "definitie": "alergare_s = totaluri.timp_in_miscare_total_s; spinning_s = suma timp_in_miscare_s din spinning.sesiuni; total_h = (alergare_s + spinning_s) / 3600; spinning_pct = spinning_s / total × 100"
   }
 }
