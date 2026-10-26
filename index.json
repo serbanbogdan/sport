@@ -1,9 +1,9 @@
 {
   "schema": "trainlive.planuri",
   "schema_version": 1,
-  "actualizat_la": "2026-10-26T18:45:00+02:00",
+  "actualizat_la": "2026-10-26T18:50:00+02:00",
   "urmatoarea": {
-    "alergare": "S1.11",
+    "alergare": null,
     "spinning": "SP1.8"
   },
   "sesiuni": [
@@ -43,7 +43,7 @@
       "data": "2026-10-24",
       "titlu": "Proba + 4×(2' alergat / 3' mers)",
       "fisier": "sesiuni/S1.11.json",
-      "status": "planificat",
+      "status": "inlocuit",
       "rezultat_id": null,
       "durata_s": 2325
     },
