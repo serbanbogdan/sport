@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generat_la": "2026-10-27T12:00:00+03:00",
-  "generat_de": "claude",
+  "generat_la": "2026-10-27T11:00:22+02:00",
+  "generat_de": "proceseaza.py",
   "sesiuni_aplicatie": 7,
   "sursa": {
     "strava_athlete_id": 28920338,
@@ -700,8 +700,7 @@
         "rezistenta_z2": null,
         "secunde_z2": 0
       }
-    ],
-    "nota": "26.10 seara (SP1.8): puls mediu 139 la aceeasi putere ca dimineata (+~20 bpm) dupa a doua sesiune in aceeasi zi; 27.10 (SP1.4): cadenta 71 rpm, 74 W, 0 s in Z2. Pulsul urmareste puterea din blocuri (~100-112 W = Z2). rezistenta_z2 18 (SP1.8, 178 s) e nefiabila; calibrarea ramane 40."
+    ]
   },
   "volum_aerob_combinat": {
     "total_h": 10.22,
