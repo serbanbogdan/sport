@@ -1,0 +1,120 @@
+{
+  "schema_version": 2,
+  "id": "SP1.9",
+  "sesiune": "SP1.9",
+  "activitate": "spinning",
+  "data": "2026-10-28",
+  "titlu": "Spinning dimineata · 3×6' zona 2 · 30 min",
+  "obiectiv": "30 min inainte de munca: puls in 117-137 cel putin 80% din timpul blocurilor, cadenta 85-90 rpm, fara depasiri peste 140.",
+  "nota_generala": "Ultimele 3 spinninguri au dat 3 rezultate diferite la aceeasi rezistenta 40: SP1.3 (26.10 dimineata) 79% Z2 in blocuri, SP1.8 (26.10 seara, dupa sesiunea de dimineata) puls mediu 139, 0% Z2 in 3 din 4 blocuri si varf 162, SP1.4 (27.10) puls mediu 103, 0 s Z2. Cauza la SP1.4: cadenta 71 rpm si 87 W in blocuri (la SP1.2 erau 81-85 rpm si 107-112 W, puls 124-132). Azi cadenta vine prima: 85-90 rpm de la minutul 1 al blocului, rezistenta de pornire 44. Sub 117 dupa 2 minute urci cu 5; peste 137 scazi cu 5. O singura sesiune de spinning pe zi: seara dupa dimineata a urcat pulsul cu ~20 bpm la aceeasi putere. Nu inlocuieste alergarea.",
+  "ritmuri": {
+    "lucru": "85-90 rpm, rezistența 40-50",
+    "usor": "70-80 rpm, rezistența 15-20"
+  },
+  "praguri": {
+    "puls_alerta": 150,
+    "zona_lucru": [
+      117,
+      137
+    ],
+    "puls_max": 195
+  },
+  "criterii_reusita": [
+    "3 din 3 blocuri de 6 minute complete",
+    "puls in 117-137 cel putin 80% din timpul blocurilor",
+    "cadenta medie 85-90 rpm in blocuri",
+    "nicio depasire peste 140",
+    "durata totala 30 min"
+  ],
+  "pasi": [
+    {
+      "tip": "incalzire",
+      "nume": "70-80 rpm · Incalzire usoara",
+      "durata": 300,
+      "nota": "rezistenta 15-20, ultimul minut la 30",
+      "tinte": {
+        "cadenta_rpm": [
+          70,
+          80
+        ],
+        "rezistenta": [
+          15,
+          20
+        ],
+        "puls": [
+          90,
+          117
+        ]
+      }
+    },
+    {
+      "repeta": 3,
+      "pasi": [
+        {
+          "tip": "alt",
+          "nume": "85-90 rpm · Bloc zona 2",
+          "durata": 360,
+          "nota": "pornesti la rezistenta 44, cadenta 85+",
+          "tinte": {
+            "cadenta_rpm": [
+              85,
+              90
+            ],
+            "rezistenta": [
+              40,
+              50
+            ],
+            "putere_w": [
+              95,
+              125
+            ],
+            "puls": [
+              117,
+              137
+            ]
+          }
+        },
+        {
+          "tip": "pauza",
+          "nume": "70-80 rpm · Pedalat usor",
+          "durata": 60,
+          "nota": "rezistenta 15-20",
+          "tinte": {
+            "cadenta_rpm": [
+              70,
+              80
+            ],
+            "rezistenta": [
+              15,
+              20
+            ],
+            "puls": [
+              90,
+              130
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "tip": "racire",
+      "nume": "65-75 rpm · Racire",
+      "durata": 240,
+      "nota": "rezistenta 10-15, pana pulsul scade sub 110",
+      "tinte": {
+        "cadenta_rpm": [
+          65,
+          75
+        ],
+        "rezistenta": [
+          10,
+          15
+        ],
+        "puls": [
+          80,
+          117
+        ]
+      }
+    }
+  ]
+}
