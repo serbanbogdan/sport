@@ -1,0 +1,52 @@
+{
+  "schema": "trainlive.analiza",
+  "schema_version": 1,
+  "id": "2026-10-27T05-57-30_spinning",
+  "creat_la": "2026-10-27T12:00:00+03:00",
+  "verdict": "partial",
+  "titlu": "Sesiune completă în siguranță dar prea ușoară: puls mediu 103, maxim 114, 0 s în Z2; cadență 71 rpm, 74 W.",
+  "praguri": [
+    {
+      "nume": "Blocuri complete",
+      "rezultat": "3 din 3",
+      "ok": true
+    },
+    {
+      "nume": "Z2 în blocuri ≥ 80 %",
+      "rezultat": "0 % (0 s din 1080)",
+      "ok": false
+    },
+    {
+      "nume": "Cadență 80-90 rpm",
+      "rezultat": "72 / 71 / 71",
+      "ok": false
+    },
+    {
+      "nume": "Puls sub 150",
+      "rezultat": "maxim 114",
+      "ok": true
+    },
+    {
+      "nume": "Durată 30 min",
+      "rezultat": "1805 s",
+      "ok": true
+    }
+  ],
+  "puncte_bune": [
+    "Toate pașii completați, fără deconectări",
+    "Pulsul în blocuri a crescut constant 103 → 107 → 110 (fără deriva de seară)",
+    "Dimineață după o zi de pauză relativă: recuperare bună, puls de repaus 78 minim"
+  ],
+  "probleme": [
+    "Z2 = 0 s: pulsul nu a atins 117 nicio secundă; Z1 100 %",
+    "Cadență 71 rpm față de 85-90 țintă; puterea în blocuri 84-88 W față de 107-112 W la SP1.2 și ~104 W la SP1.3/1.8 — la aceeași rezistență 40, cadența mai mică a dat 20 W mai puțin",
+    "Nu s-a aplicat regula „sub 117 după 2 minute urci cu 5”: rezistența a rămas 37-40",
+    "Nu poate calibra rezistența Z2 (0 s)"
+  ],
+  "sesiunea_urmatoare": {
+    "id": "SP1.9",
+    "fisier": "sesiuni/SP1.9.json",
+    "motiv": "SP1.9 (28.10): cadență 85-90 din primul minut, rezistență de pornire 44, urci cu 5 dacă după 2 min pulsul e sub 117."
+  },
+  "progres_headline_pct": 3.2
+}

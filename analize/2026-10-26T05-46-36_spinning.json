@@ -1,0 +1,52 @@
+{
+  "schema": "trainlive.analiza",
+  "schema_version": 1,
+  "id": "2026-10-26T05-46-36_spinning",
+  "creat_la": "2026-10-27T12:00:00+03:00",
+  "verdict": "partial",
+  "titlu": "30 min complete, blocuri 79,4 % în Z2 (țintă 80 %), cadență 80/80/79 rpm, rezistența Z2 = 40 (confirmă calibrarea).",
+  "praguri": [
+    {
+      "nume": "Blocuri complete",
+      "rezultat": "3 din 3",
+      "ok": true
+    },
+    {
+      "nume": "Z2 în blocuri ≥ 80 %",
+      "rezultat": "79,4 % (858 s din 1080)",
+      "ok": false
+    },
+    {
+      "nume": "Cadență 80-90 rpm",
+      "rezultat": "80 / 80 / 79",
+      "ok": false
+    },
+    {
+      "nume": "Puls sub 150",
+      "rezultat": "maxim 140",
+      "ok": true
+    },
+    {
+      "nume": "Durată 30 min",
+      "rezultat": "1804 s",
+      "ok": true
+    }
+  ],
+  "puncte_bune": [
+    "Rezistența 40 a ținut pulsul în Z2: 68 % → 88 % → 82 % pe blocuri",
+    "Fără peste 150; maxim 140",
+    "rezistenta_z2 = 40 pe 1152 s, calibrare stabilă (43, 40, 40)",
+    "Încălzirea de 5 min a funcționat: blocul 1 a ajuns la 117 după 114 s (față de ~6,6 min la 23.10)"
+  ],
+  "probleme": [
+    "Blocul 1: 114 s sub 117 (puls start 93)",
+    "Cadență 79 rpm în blocul 3 și medie 78 pe sesiune, la limita de jos a țintei",
+    "Pauzele 2-3: 132-133 mediu, peste 130 (derivă după efort)"
+  ],
+  "sesiunea_urmatoare": {
+    "id": "SP1.9",
+    "fisier": "sesiuni/SP1.9.json",
+    "motiv": "SP1.8 (26.10 seara) a fost planificată ca a doua sesiune a zilei."
+  },
+  "progres_headline_pct": 3.2
+}

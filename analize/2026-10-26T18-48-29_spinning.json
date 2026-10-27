@@ -1,0 +1,52 @@
+{
+  "schema": "trainlive.analiza",
+  "schema_version": 1,
+  "id": "2026-10-26T18-48-29_spinning",
+  "creat_la": "2026-10-27T12:00:00+03:00",
+  "verdict": "slab",
+  "titlu": "Seară după sesiunea de dimineață: puls mediu 139, vârf 162, doar 148 s în Z2; blocul 3 sărit manual la 170 s din 360.",
+  "praguri": [
+    {
+      "nume": "Blocuri complete",
+      "rezultat": "3 din 4 (blocul 3: 170 s din 360, pas sărit manual)",
+      "ok": false
+    },
+    {
+      "nume": "Z2 în blocuri ≥ 80 %",
+      "rezultat": "84 s din 1250 (≈ 7 %)",
+      "ok": false
+    },
+    {
+      "nume": "Puls sub 150",
+      "rezultat": "393 s peste 150 în toată sesiunea, 84 s peste 155, maxim 162",
+      "ok": false
+    },
+    {
+      "nume": "Cadență 85-90 rpm",
+      "rezultat": "84 / 80 / 76 / 77",
+      "ok": false
+    },
+    {
+      "nume": "Durată",
+      "rezultat": "2099 s (plan 38 min, 34 realizate)",
+      "ok": false
+    }
+  ],
+  "puncte_bune": [
+    "Rezistența 40-41 și puterea 97-114 W respectate",
+    "Fără deconectări; pasul în exces a fost oprit de utilizator când pulsul a trecut de 150",
+    "Pulsul a coborât la 133-140 în ultimele minute"
+  ],
+  "probleme": [
+    "Același efort (≈ 100 W la rezistența 40) a dat puls 137-153 față de 119-132 dimineață: ~+20 bpm, probabil oboseală cumulată după sesiunea de la 05:46 (a doua sesiune în aceeași zi) și ziua de lucru",
+    "Alerta de 150 declanșată de ~25 de ori; indicația „scazi rezistența cu 10” nu a fost aplicată (rezistența a rămas 39-41)",
+    "Z2 aproape absent: Z3 1527 s (73 % din sesiune), Z4 84 s",
+    "rezistenta_z2 = 18 pe doar 178 s — valoare nefiabilă, nu intră în calibrare (calibrata rămâne 40)"
+  ],
+  "sesiunea_urmatoare": {
+    "id": "SP1.9",
+    "fisier": "sesiuni/SP1.9.json",
+    "motiv": "SP1.9 (28.10): un singur spinning pe zi; cadența 85+ înainte de rezistență."
+  },
+  "progres_headline_pct": 3.2
+}

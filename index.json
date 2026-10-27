@@ -1,7 +1,7 @@
 {
   "schema": "trainlive.rezultate",
   "schema_version": 1,
-  "actualizat_la": "2026-10-27T06:27:48+02:00",
+  "actualizat_la": "2026-10-27T06:32:40+02:00",
   "sesiuni": [
     {
       "id": "2026-10-20T18-10-51_alergare",
@@ -89,9 +89,9 @@
       "kcal": 37,
       "cel_mai_lung_bloc_alergare_s": null,
       "putere_medie_w": 86,
-      "analiza": null,
-      "analizat": false,
-      "verdict": null
+      "analiza": "analize/2026-10-26T05-46-36_spinning.md",
+      "analizat": true,
+      "verdict": "partial"
     },
     {
       "id": "2026-10-26T18-48-29_spinning",
@@ -107,9 +107,9 @@
       "kcal": 44,
       "cel_mai_lung_bloc_alergare_s": null,
       "putere_medie_w": 87,
-      "analiza": null,
-      "analizat": false,
-      "verdict": null
+      "analiza": "analize/2026-10-26T18-48-29_spinning.md",
+      "analizat": true,
+      "verdict": "slab"
     },
     {
       "id": "2026-10-27T05-57-30_spinning",
@@ -125,9 +125,9 @@
       "kcal": 32,
       "cel_mai_lung_bloc_alergare_s": null,
       "putere_medie_w": 74,
-      "analiza": null,
-      "analizat": false,
-      "verdict": null
+      "analiza": "analize/2026-10-27T05-57-30_spinning.md",
+      "analizat": true,
+      "verdict": "partial"
     }
   ]
 }
