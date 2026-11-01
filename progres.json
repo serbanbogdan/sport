@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generat_la": "2026-10-28T18:57:30+02:00",
+  "generat_la": "2026-11-01T17:02:44+02:00",
   "generat_de": "proceseaza.py",
-  "sesiuni_aplicatie": 8,
+  "sesiuni_aplicatie": 9,
   "sursa": {
     "strava_athlete_id": 28920338,
     "ultima_activitate_strava_id": "20621071322",
@@ -84,124 +84,121 @@
     "nota": "Planul initial: 4 saptamani × 3 sesiuni = 12, ultima = test 25 min continuu. Luna 1 a fost extinsa (sesiuni repetate), deci procentul e orientativ."
   },
   "totaluri": {
-    "alergari": 12,
-    "distanta_totala_km": 45.24,
-    "timp_in_miscare_total_s": 27483,
-    "timp_in_miscare_total_h": 7.63,
+    "alergari": 13,
+    "distanta_totala_km": 48.94,
+    "timp_in_miscare_total_s": 29850,
+    "timp_in_miscare_total_h": 8.29,
     "relative_effort_total": 301,
-    "ritm_mediu_global_min_km": "10:07",
-    "distanta_medie_pe_sesiune_km": 3.77
+    "ritm_mediu_global_min_km": "10:10",
+    "distanta_medie_pe_sesiune_km": 3.76
   },
   "ultima_sesiune": {
-    "nr": 12,
+    "nr": 13,
     "sursa": "aplicatie",
-    "rezultat_id": "2026-10-22T16-06-37_alergare",
+    "rezultat_id": "2026-11-01T16-22-20_alergare",
     "strava_id": null,
-    "data": "2026-10-22",
-    "ora_start": "16:06",
-    "sesiune_plan": "S1.10",
-    "titlu_plan": "Proba + 4×(2' alergat / 3' mers)",
-    "distanta_km": 3.72,
-    "distanta_cumulata_km": 45.24,
-    "timp_in_miscare_s": 2260,
-    "timp_total_s": 2328,
-    "ritm_mediu_in_miscare_min_km": "10:07",
-    "ritm_mediu_in_miscare_s_km": 607,
-    "ritm_mediu_total_min_km": "10:26",
-    "cel_mai_rapid_km_s": 563,
-    "cel_mai_rapid_km_min_km": "9:23",
-    "puls_mediu": 116,
-    "puls_max": 161,
-    "puls_max_pct_din_195": 82.6,
+    "data": "2026-11-01",
+    "ora_start": "16:22",
+    "sesiune_plan": "S1.14",
+    "titlu_plan": "Proba + 4×(2'10\" alergat / 3' mers)",
+    "distanta_km": 3.7,
+    "distanta_cumulata_km": 48.94,
+    "timp_in_miscare_s": 2367,
+    "timp_total_s": 2411,
+    "ritm_mediu_in_miscare_min_km": "10:40",
+    "ritm_mediu_in_miscare_s_km": 640,
+    "ritm_mediu_total_min_km": "10:52",
+    "cel_mai_rapid_km_s": 580,
+    "cel_mai_rapid_km_min_km": "9:40",
+    "puls_mediu": 136,
+    "puls_max": 173,
+    "puls_max_pct_din_195": 88.7,
     "relative_effort": null,
-    "cadenta_medie_sesiune_spm": 106,
-    "cadenta_in_alergare_spm": 132,
+    "cadenta_medie_sesiune_spm": 102,
+    "cadenta_in_alergare_spm": 131,
     "plan": {
-      "durata_planificata_s": 2325,
-      "alergare_planificata_s": 540,
+      "durata_planificata_s": 2365,
+      "alergare_planificata_s": 580,
       "blocuri_planificate": 4,
       "blocuri_executate": 4,
-      "bloc_alergare_max_masurat_s": 120
+      "bloc_alergare_max_masurat_s": 129
     },
     "realizat_fata_de_plan": {
-      "durata_pct": 100.1,
+      "durata_pct": 101.9,
       "blocuri_pct": 100.0,
-      "alergare_pct": 98.3,
+      "alergare_pct": 91.9,
       "blocuri_complete_pct": 100.0,
       "nota": "calculat de proceseaza.py din rezultatul aplicatiei Train Live"
     },
     "praguri": {
       "puls_max_sub_155_proxy": false,
-      "nota": "HR max al sesiunii 161 (probabil artefact in mers); in blocurile de alergare toate vârfurile sunt sub 155"
+      "nota": "proxy: HR max al intregii sesiuni <= 155; pragul real e pe blocurile de alergare"
     },
-    "observatii": "4 din 4 blocuri de 120 s complete, fiecare pornit sub 130 (103/113/102/111), vârf 141/144/146/151 (sub 155 in toate); cadenta 130-132 spm si Z1+Z2 84,3 % raman sub prag. Proba la 6:39/km, sub limita dura 7:15. Verdict: partial. Analiza: rezulate/analize/2026-10-22T16-06-37_alergare.md",
+    "observatii": "Sesiune inregistrata cu Train Live; analiza lui Claude urmeaza in rezulate/analize/2026-11-01T16-22-20_alergare.md.",
     "analiza_detaliata": {
       "sursa": "Train Live: puls Venu X1 + GPS si pasi de la telefon, esantioane 1 Hz; blocuri = viteza >= 1,95 m/s minim 20 s",
       "blocuri_alergare": [
         {
           "nr": 1,
-          "durata_s": 120,
-          "planificat_s": 120,
-          "ritm_min_km": "7:17",
-          "puls_la_reluare": 103,
-          "puls_varf": 141,
-          "cadenta_spm": 130,
-          "complet": true
+          "durata_s": 59,
+          "planificat_s": 130,
+          "ritm_min_km": "6:56",
+          "puls_la_reluare": 142,
+          "puls_varf": 145,
+          "cadenta_spm": 131,
+          "complet": false
         },
         {
           "nr": 2,
-          "durata_s": 120,
-          "planificat_s": 120,
-          "ritm_min_km": "7:18",
-          "puls_la_reluare": 113,
-          "puls_varf": 144,
-          "cadenta_spm": 132,
+          "durata_s": 129,
+          "planificat_s": 130,
+          "ritm_min_km": "6:57",
+          "puls_la_reluare": 133,
+          "puls_varf": 153,
+          "cadenta_spm": 135,
           "complet": true
         },
         {
           "nr": 3,
-          "durata_s": 120,
-          "planificat_s": 120,
-          "ritm_min_km": "7:34",
-          "puls_la_reluare": 102,
-          "puls_varf": 146,
-          "cadenta_spm": 130,
+          "durata_s": 123,
+          "planificat_s": 130,
+          "ritm_min_km": "7:39",
+          "puls_la_reluare": 132,
+          "puls_varf": 172,
+          "cadenta_spm": 129,
           "complet": true
         },
         {
           "nr": 4,
-          "durata_s": 120,
-          "planificat_s": 120,
-          "ritm_min_km": "7:46",
-          "puls_la_reluare": 111,
-          "puls_varf": 151,
-          "cadenta_spm": 132,
+          "durata_s": 124,
+          "planificat_s": 130,
+          "ritm_min_km": "7:48",
+          "puls_la_reluare": 132,
+          "puls_varf": 167,
+          "cadenta_spm": 133,
           "complet": true
+        },
+        {
+          "nr": 5,
+          "durata_s": 98,
+          "planificat_s": 130,
+          "ritm_min_km": "7:57",
+          "puls_la_reluare": 130,
+          "puls_varf": 168,
+          "cadenta_spm": 127,
+          "complet": false
         }
       ],
       "zone_puls_pct": {
-        "Z1": 64.5,
-        "Z2": 19.8,
-        "Z3": 15.4,
-        "Z4": 0.3,
+        "Z1": 10.2,
+        "Z2": 50.6,
+        "Z3": 21.9,
+        "Z4": 17.3,
         "Z5": 0.0
       },
-      "z1_z2_pct": 84.3,
-      "secunde_peste_155": 6,
-      "secunde_peste_160": 3,
-      "nota_blocuri": "Reconstruit din pasii planului; blocul 4 impartit de script in 40+73 s din cauza unei incetiniri scurte la 6,6 km/h (continuu). Proba 60 s la 6:39/km, puls 106-129.",
-      "praguri_plan": {
-        "puls_varf_sub_155": "4 din 4 (141, 144, 146, 151)",
-        "reluare_sub_130": "4 din 4 (103, 113, 102, 111)",
-        "cadenta_165_170": "0 din 4 (130-132 spm)",
-        "z1_z2_peste_85_pct": "84,3 % - nu"
-      },
-      "cadenta_in_alergare_spm": [
-        130,
-        132
-      ],
-      "puls_max_sesiune_loc": "161 la secunda 792, in mersul de dupa blocul 1: salt 144->161->148 in 12 s, probabil artefact senzor; in alergare maxim 151 (blocul 4)",
-      "puls_max_blocuri_loc": "141/144/146/151, la 110-116 s din fiecare bloc"
+      "z1_z2_pct": 60.7,
+      "secunde_peste_155": 418,
+      "secunde_peste_160": 295
     }
   },
   "tendinte": {
@@ -217,7 +214,8 @@
       3.3,
       3.91,
       3.83,
-      3.72
+      3.72,
+      3.7
     ],
     "puls_mediu": [
       152,
@@ -231,7 +229,8 @@
       127.8,
       131.8,
       130,
-      116
+      116,
+      136
     ],
     "puls_max": [
       193,
@@ -245,7 +244,8 @@
       164,
       166,
       162,
-      161
+      161,
+      173
     ],
     "relative_effort": [
       85,
@@ -258,6 +258,7 @@
       36,
       19,
       29,
+      null,
       null,
       null
     ],
@@ -273,7 +274,8 @@
       547,
       597,
       631,
-      607
+      607,
+      640
     ],
     "cel_mai_rapid_km_s": [
       null,
@@ -287,7 +289,8 @@
       505,
       536,
       556,
-      563
+      563,
+      580
     ],
     "etichete_date": [
       "2026-08-29",
@@ -301,7 +304,8 @@
       "2026-10-13",
       "2026-10-17",
       "2026-10-20",
-      "2026-10-22"
+      "2026-10-22",
+      "2026-11-01"
     ],
     "interpretare": {
       "distanta": "3,84 km (S1.1) -> 4,01 km (S1.7 si 06.10); 3,30 km la 13.10; 3,91 km la 17.10",
@@ -323,6 +327,7 @@
       "strava",
       "strava",
       "strava",
+      "aplicatie",
       "aplicatie",
       "aplicatie"
     ]
@@ -383,6 +388,11 @@
         "de_la": "2026-10-20",
         "pana_la": "2026-10-22",
         "zile": 2
+      },
+      {
+        "de_la": "2026-10-22",
+        "pana_la": "2026-11-01",
+        "zile": 10
       }
     ],
     "cea_mai_lunga_pauza_zile": 20,
@@ -436,6 +446,13 @@
         "km": 7.55,
         "timp_in_miscare_s": 4678,
         "relative_effort_total": null
+      },
+      {
+        "saptamana_iso": "2026-W44",
+        "sesiuni": 1,
+        "km": 3.7,
+        "timp_in_miscare_s": 2367,
+        "relative_effort_total": null
       }
     ]
   },
@@ -474,7 +491,7 @@
       "ritm_limita_dura_min_km": "7:15"
     },
     "sesiuni_cu_puls_max_sub_155": 2,
-    "sesiuni_cu_puls_max_sub_155_pct": 16.7
+    "sesiuni_cu_puls_max_sub_155_pct": 15.4
   },
   "alte_activitati": [
     {
@@ -726,9 +743,9 @@
     ]
   },
   "volum_aerob_combinat": {
-    "total_h": 10.89,
-    "spinning_pct": 29.9,
-    "alergare_s": 27483,
+    "total_h": 11.54,
+    "spinning_pct": 28.2,
+    "alergare_s": 29850,
     "spinning_s": 11705,
     "definitie": "alergare_s = totaluri.timp_in_miscare_total_s; spinning_s = suma timp_in_miscare_s din spinning.sesiuni; total_h = (alergare_s + spinning_s) / 3600; spinning_pct = spinning_s / total × 100"
   }
