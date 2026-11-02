@@ -1,10 +1,10 @@
 {
   "schema": "trainlive.planuri",
   "schema_version": 1,
-  "actualizat_la": "2026-11-01T17:02:44+02:00",
+  "actualizat_la": "2026-11-02T19:59:12+02:00",
   "urmatoarea": {
     "alergare": "S1.12",
-    "spinning": "SP1.9"
+    "spinning": null
   },
   "sesiuni": [
     {
@@ -163,8 +163,8 @@
       "data": "2026-10-28",
       "titlu": "Spinning dimineata · 3×6' zona 2 · 30 min",
       "fisier": "sesiuni/SP1.9.json",
-      "status": "planificat",
-      "rezultat_id": null,
+      "status": "realizat",
+      "rezultat_id": "2026-11-02T19-28-40_spinning",
       "durata_s": 1800
     }
   ]
