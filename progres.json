@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generat_la": "2026-11-05T16:27:56+02:00",
-  "generat_de": "proceseaza.py",
+  "generat_la": "2026-11-25T23:58:00+02:00",
+  "generat_de": "claude",
   "sesiuni_aplicatie": 11,
   "sursa": {
     "strava_athlete_id": 28920338,
@@ -134,69 +134,49 @@
       "puls_max_sub_155_proxy": false,
       "nota": "proxy: HR max al intregii sesiuni <= 155; pragul real e pe blocurile de alergare"
     },
-    "observatii": "Sesiune inregistrata cu Train Live; analiza lui Claude urmeaza in rezulate/analize/2026-11-05T15-47-51_alergare.md.",
+    "observatii": "Analiza Claude (partial): 4 din 4 blocuri de 120 s complete; varf sub 155 in 3 din 4 (146, 172, 143, 124); reluare 102, ~156, 128, 110. Blocul 1 la 6:14/km (sub limita 7:15) a dus la reluare ~156 si varf 172 in blocul 2; blocurile 3-4 curate. 41 s alergate la 5:27/km in racire (neplanificat). Z1+Z2 84,3 %, cadenta 126-135 spm. Inaintea ei, S1.14 (01.11, 4x130 s) a fost slaba: 418 s peste 155. Pauza pana la 25.11: 20 de zile, deci urmatoarea sesiune e un pas inapoi (4x100 s).",
     "analiza_detaliata": {
       "sursa": "Train Live: puls Venu X1 + GPS si pasi de la telefon, esantioane 1 Hz; blocuri = viteza >= 1,95 m/s minim 20 s",
       "blocuri_alergare": [
         {
           "nr": 1,
-          "durata_s": 58,
+          "durata_s": 120,
           "planificat_s": 120,
-          "ritm_min_km": "7:19",
-          "puls_la_reluare": 114,
-          "puls_varf": 129,
-          "cadenta_spm": 133,
-          "complet": false
+          "ritm_min_km": "6:14",
+          "puls_la_reluare": 102,
+          "puls_varf": 146,
+          "cadenta_spm": 135,
+          "complet": true
         },
         {
           "nr": 2,
-          "durata_s": 119,
+          "durata_s": 120,
           "planificat_s": 120,
-          "ritm_min_km": "6:10",
-          "puls_la_reluare": 103,
-          "puls_varf": 148,
-          "cadenta_spm": 136,
+          "ritm_min_km": "7:45",
+          "puls_la_reluare": 156,
+          "puls_varf": 172,
+          "cadenta_spm": 126,
           "complet": true
         },
         {
           "nr": 3,
-          "durata_s": 116,
+          "durata_s": 120,
           "planificat_s": 120,
-          "ritm_min_km": "7:40",
-          "puls_la_reluare": 153,
-          "puls_varf": 172,
-          "cadenta_spm": 128,
+          "ritm_min_km": "7:44",
+          "puls_la_reluare": 128,
+          "puls_varf": 143,
+          "cadenta_spm": 131,
           "complet": true
         },
         {
           "nr": 4,
-          "durata_s": 116,
+          "durata_s": 120,
           "planificat_s": 120,
-          "ritm_min_km": "7:45",
-          "puls_la_reluare": 128,
-          "puls_varf": 143,
-          "cadenta_spm": 133,
-          "complet": true
-        },
-        {
-          "nr": 5,
-          "durata_s": 117,
-          "planificat_s": 120,
-          "ritm_min_km": "7:26",
+          "ritm_min_km": "7:27",
           "puls_la_reluare": 110,
-          "puls_varf": 125,
-          "cadenta_spm": 132,
+          "puls_varf": 124,
+          "cadenta_spm": 131,
           "complet": true
-        },
-        {
-          "nr": 6,
-          "durata_s": 41,
-          "planificat_s": 120,
-          "ritm_min_km": "5:21",
-          "puls_la_reluare": 114,
-          "puls_varf": 117,
-          "cadenta_spm": 137,
-          "complet": false
         }
       ],
       "zone_puls_pct": {
@@ -208,7 +188,28 @@
       },
       "z1_z2_pct": 84.3,
       "secunde_peste_155": 125,
-      "secunde_peste_160": 93
+      "secunde_peste_160": 93,
+      "praguri_plan": {
+        "puls_sub_155_in_blocuri": "3 din 4",
+        "reluare_sub_130": "3 din 4",
+        "cadenta_165_170": "0 din 4",
+        "z1_z2_peste_85_pct": "84,3 % (nu)"
+      },
+      "cadenta_in_alergare_spm": [
+        135,
+        126,
+        131,
+        131
+      ],
+      "puls_max_blocuri_loc": [
+        146,
+        172,
+        143,
+        124
+      ],
+      "puls_max_mers_dupa_bloc1_loc": 163,
+      "nota_blocuri": "Blocurile sunt pe pasii planului (nu pe fragmentele de viteza ale scriptului); puls lipsa 6 s la startul blocului 2, reluare estimata ~156.",
+      "alergare_neplanificata": "41 s la 5:27/km in racire (t 2012-2053), varf puls 117"
     }
   },
   "tendinte": {
@@ -327,11 +328,13 @@
     "interpretare": {
       "distanta": "3,84 km (S1.1) -> 4,01 km (S1.7 si 06.10); 3,30 km la 13.10; 3,91 km la 17.10",
       "cel_mai_rapid_km": "551 s (16.09) -> 538 s (06.10) -> 505 s (13.10, 8:25/km) -> 536 s (17.10): la 17.10 ritmul a fost controlat, nu cursa dupa record",
-      "puls_max": "peste 155 la 10 din 12 sesiuni; S1.10: 161 in mers (probabil artefact), dar in blocuri 141-151, prima sesiune cu 4 din 4 sub 155",
+      "puls_max": "S1.10 141-151 in blocuri; S1.14 (01.11) 151, 172, 167, 172 (418 s peste 155); S1.12 (05.11) 146, 172, 143, 124. Sesiuni cu puls max sub 155: 2 din 14",
       "pauze": "pauza de 20 de zile (16.09 -> 06.10) rupe seria; dupa ea: 06.10, 13.10, 17.10 (la 7 si 4 zile)",
-      "bloc_continuu": "92 s (S1.6, 14.09) -> 145 s (S1.8, 17.10) -> 150 s (S1.9, 20.10) -> 4x120 s la S1.10 (scadere planificata); maximul ramane 150 s",
-      "reluare": "104 -> 119 -> 125 -> 128 (S1.9) -> 103 -> 113 -> 102 -> 111 (S1.10): stabila, fara urcare",
-      "ritm": "proba S1.10 la 6:39/km (sub limita 7:15); blocuri 7:17, 7:18, 7:34, 7:46"
+      "bloc_continuu": "150 s (S1.9) ramane maximul; S1.14 4x130 s (129 s masurat), S1.12 4x120 s. Nu creste pana la o sesiune 'bine'",
+      "reluare": "S1.14: 127, 130, 130, 129 (la limita); S1.12: 102, ~156, 128, 110 (blocul 2 dupa un bloc prea rapid)",
+      "ritm": "proba si blocul 1 la 6:59/km (S1.14), blocul 1 la 6:14/km (S1.12): sub limita 7:15; blocurile corecte 7:27-8:08. Problema principala: controlul ritmului la inceput",
+      "pauza": "20 de zile fara alergare (05.11 -> 25.11): revenire cu pas inapoi (S1.16, 4x100 s)",
+      "spinning": "SP1.1 (28.10 seara) Z2 20 % in blocuri; SP1.9 (02.11 seara) 82/49/21 % cu deriva 127->140; dimineata Z2 77-79 % (SP1.2, SP1.3)"
     },
     "sursa": [
       "strava",
@@ -539,14 +542,14 @@
     }
   ],
   "urmatoarea_sesiune": {
-    "cod": "S1.15",
+    "cod": "S1.16",
     "tip_activitate": "alergare",
-    "fisier_plan": "sesiuni/S1.15.json",
-    "data_planificata": "2026-11-05",
-    "titlu": "Proba + 4×(2'10\" alergat / 3' mers)",
-    "durata_planificata_s": 2365,
-    "alergare_planificata_s": 580,
-    "bloc_continuu_planificat_s": 130,
+    "fisier_plan": "sesiuni/S1.16.json",
+    "data_planificata": "2026-11-26",
+    "titlu": "Proba + 4×(1'40\" alergat / 3' mers)",
+    "durata_planificata_s": 2245,
+    "alergare_planificata_s": 460,
+    "bloc_continuu_planificat_s": 100,
     "procent_headline_dupa_executie_corecta": 3.2
   },
   "echipament": {
@@ -571,23 +574,23 @@
     "culoare_spinning": "#E7B366"
   },
   "urmatoarea_sesiune_alergare": {
-    "cod": "S1.15",
+    "cod": "S1.16",
     "tip_activitate": "alergare",
-    "fisier_plan": "sesiuni/S1.15.json",
-    "data_planificata": "2026-11-05",
-    "titlu": "Proba + 4×(2'10\" alergat / 3' mers)",
-    "durata_planificata_s": 2365,
-    "alergare_planificata_s": 580,
-    "bloc_continuu_planificat_s": 130,
+    "fisier_plan": "sesiuni/S1.16.json",
+    "data_planificata": "2026-11-26",
+    "titlu": "Proba + 4×(1'40\" alergat / 3' mers)",
+    "durata_planificata_s": 2245,
+    "alergare_planificata_s": 460,
+    "bloc_continuu_planificat_s": 100,
     "procent_headline_dupa_executie_corecta": 3.2
   },
   "urmatoarea_sesiune_spinning": {
-    "cod": "SP1.9",
+    "cod": "SP1.10",
     "tip_activitate": "spinning",
-    "fisier_plan": "sesiuni/SP1.9.json",
-    "data_planificata": "2026-10-28",
-    "titlu": "Spinning dimineata · 3×6' zona 2 · 30 min",
-    "durata_planificata_s": 1800
+    "fisier_plan": "sesiuni/SP1.10.json",
+    "data_planificata": "2026-11-27",
+    "titlu": "Spinning dimineata · 4×5' zona 2 · 33 min",
+    "durata_planificata_s": 1980
   },
   "spinning": {
     "totaluri": {
@@ -791,7 +794,8 @@
         "rezistenta_z2": 41,
         "secunde_z2": 925
       }
-    ]
+    ],
+    "nota": "Seara (SP1.1, SP1.8, SP1.9) pulsul e cu ~15-20 bpm peste dimineata la aceeasi putere; deriva cardiaca in blocuri de 6-8 min dupa ~4 min. Rezistenta Z2 calibrata 30 vine din valori amestecate (18, 30, 41); SP1.9 da 41 la 100-107 W."
   },
   "volum_aerob_combinat": {
     "total_h": 12.7,
