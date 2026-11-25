@@ -1,0 +1,53 @@
+{
+ "schema": "trainlive.analiza",
+ "schema_version": 1,
+ "id": "2026-11-02T19-28-40_spinning",
+ "creat_la": "2026-11-25T23:50:00+02:00",
+ "verdict": "partial",
+ "titlu": "3×6 min la 100-107 W: Z2 82 % în blocul 1, 49 % în blocul 2, 21 % în blocul 3 — pulsul urcă 127→136→140 la aceeași putere; fără pas peste 150 în blocuri.",
+ "praguri": [
+  {
+   "nume": "Blocuri complete",
+   "rezultat": "3 din 3 (360 s fiecare), 8 din 8 pași",
+   "ok": true
+  },
+  {
+   "nume": "Z2 (117-137) peste 80 % din blocuri",
+   "rezultat": "51 % (82 / 49 / 21)",
+   "ok": false
+  },
+  {
+   "nume": "Fără depășiri peste 140",
+   "rezultat": "blocul 1 vârf 140, blocul 2 vârf 145 (184 s peste 137), blocul 3 vârf 149",
+   "ok": false
+  },
+  {
+   "nume": "Cadență 85-90 rpm",
+   "rezultat": "80 / 78 / 73 rpm",
+   "ok": false
+  },
+  {
+   "nume": "Putere 95-125 W",
+   "rezultat": "107 / 104 / 100 W",
+   "ok": true
+  }
+ ],
+ "puncte_bune": [
+  "Blocul 1 aproape de țintă: 82 % Z2, vârf 140",
+  "Putere 100-107 W în țintă în toate blocurile (față de 72-89 W la sesiunile anterioare)",
+  "Fără alertă peste 150 în blocuri (o alertă la 151 în pauza 3), recuperare 60 s: 15 bpm",
+  "rezistenta_z2 = 41, cea mai fiabilă valoare recentă"
+ ],
+ "probleme": [
+  "Deriva cardiacă: puls mediu pe bloc 127 → 136 → 140 la 107 → 104 → 100 W; blocul 3 are 286 s peste 137",
+  "Cadență 80 → 78 → 73 rpm: scade în fiecare bloc, sub 85-90",
+  "Rezistența a crescut 41 → 42 → 45 în blocuri, deși nota cerea 44 de pornire",
+  "Sesiune seara (19:28), nu dimineața planificată"
+ ],
+ "sesiunea_urmatoare": {
+  "id": "SP1.10",
+  "fisier": "sesiuni/SP1.10.json",
+  "motiv": "SP1.10, 2026-11-27: rezistență 38-40 fără urcare între blocuri, blocuri de 5 min ca să nu intre deriva."
+ },
+ "progres_headline_pct": 3.2
+}

@@ -1,0 +1,50 @@
+{
+ "schema": "trainlive.analiza",
+ "schema_version": 1,
+ "id": "2026-11-01T16-22-20_alergare",
+ "creat_la": "2026-11-25T23:50:00+02:00",
+ "verdict": "slab",
+ "titlu": "4 din 4 blocuri de 130 s făcute, dar vârf peste 155 în 3 din 4 (172, 167, 172), 418 s peste 155 și probă/bloc 1 sub limita dură de 7:15/km.",
+ "praguri": [
+  {
+   "nume": "Vârf sub 155 în blocuri",
+   "rezultat": "1 din 4 (151, 172, 167, 172)",
+   "ok": false
+  },
+  {
+   "nume": "Reluare sub 130",
+   "rezultat": "2 din 4 strict (127, 130, 130, 129); 4 din 4 doar după prelungiri",
+   "ok": false
+  },
+  {
+   "nume": "Cadență 165-170 spm",
+   "rezultat": "0 din 4 (134, 128, 130, 125)",
+   "ok": false
+  },
+  {
+   "nume": "Z1+Z2 peste 85 %",
+   "rezultat": "60,7 % (Z3 529 s, Z4 418 s)",
+   "ok": false
+  }
+ ],
+ "puncte_bune": [
+  "4 din 4 blocuri de 130 s complete, fără pas sărit și fără oprire",
+  "Mersul de refacere a adus pulsul la 129-131 înainte de fiecare reluare (cu prelungiri de 1-5 s)",
+  "Recuperare la 60 s după final: 26 bpm; fără deconectări ceas/GPS",
+  "Cel mai lung bloc continuu 129 s, fără creștere față de 150 s (S1.9)"
+ ],
+ "probleme": [
+  "Proba la 6:59/km și blocul 1 la 6:59/km: sub limita dură de 7:15/km, deși planul cerea 8:00",
+  "Pulsul a trecut 155 în 3 din 4 blocuri (vârf 172 în blocurile 2 și 4); 418 s peste 155, 295 s peste 160",
+  "Mersul de 180 s nu scade pulsul: din 172 la sfârșitul blocului ajunge 129-131 la sfârșit, deci reluarea e la limita de 130 în fiecare ciclu",
+  "Z1+Z2 doar 60,7 % (față de 84,3 % la S1.10)",
+  "Cadență 125-134 spm, fără schimbare față de toate sesiunile",
+  "Subiectiv necompletat (RPE, senzație, durere = null)"
+ ],
+ "sesiunea_urmatoare": {
+  "id": "S1.12",
+  "fisier": "sesiuni/S1.12.json",
+  "motiv": "Sesiune slabă: următoarea nu crește. S-a făcut S1.12 (4×120 s) pe 05.11, adică un pas înapoi de la 130 s."
+ },
+ "progres_headline_pct": 3.2
+}

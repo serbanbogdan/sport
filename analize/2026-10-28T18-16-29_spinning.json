@@ -1,0 +1,47 @@
+{
+ "schema": "trainlive.analiza",
+ "schema_version": 1,
+ "id": "2026-10-28T18-16-29_spinning",
+ "creat_la": "2026-11-25T23:50:00+02:00",
+ "verdict": "partial",
+ "titlu": "3 blocuri de 8 min făcute fără pas sărit, dar Z2 doar 55 % / 6 % / 0 % în blocuri (puls mediu 142, 3 blocuri la 136-149) la rezistența 28-40.",
+ "praguri": [
+  {
+   "nume": "Blocuri complete",
+   "rezultat": "3 din 3 (480 s fiecare), 8 din 8 pași",
+   "ok": true
+  },
+  {
+   "nume": "Z2 (117-137) peste 80 % din blocuri",
+   "rezultat": "20 % (blocul 1: 55 %, 2: 6 %, 3: 0 %)",
+   "ok": false
+  },
+  {
+   "nume": "Puls sub 150",
+   "rezultat": "da în bloc 1; 184 s peste 150 în blocul 2 și 95 s în blocul 3; maxim 157",
+   "ok": false
+  },
+  {
+   "nume": "Cadență 80-90 rpm",
+   "rezultat": "77 / 70 / 73 rpm",
+   "ok": false
+  }
+ ],
+ "puncte_bune": [
+  "Toți cei 8 pași completați, fără deconectări",
+  "Putere medie 72 W (blocuri 79-84), kcal 41, distanță 18,6 km",
+  "Vârf 157, doar 36 s peste 155"
+ ],
+ "probleme": [
+  "Seara (18:16) pulsul a stat în Z3 1842 s din 2422 (76 %); Z1+Z2 doar 20,4 %",
+  "Rezistența a crescut de la 30 (bloc 1) la 40 (bloc 2) fără să scadă cadența sub 70-77: pulsul a urcat de la 136 la 149",
+  "Cadență sub țintă în toate cele 3 blocuri",
+  "Recuperare 60 s: -3 (pulsul nu a scăzut deloc la final)"
+ ],
+ "sesiunea_urmatoare": {
+  "id": "SP1.9",
+  "fisier": "sesiuni/SP1.9.json",
+  "motiv": "SP1.9 pe 02.11, dimineață→seară 3×6' cu cadența prima."
+ },
+ "progres_headline_pct": 3.2
+}
