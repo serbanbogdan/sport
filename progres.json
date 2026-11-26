@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generat_la": "2026-11-25T23:58:00+02:00",
-  "generat_de": "claude",
+  "generat_la": "2026-11-26T14:34:25+02:00",
+  "generat_de": "proceseaza.py",
   "sesiuni_aplicatie": 11,
   "sursa": {
     "strava_athlete_id": 28920338,
@@ -794,8 +794,7 @@
         "rezistenta_z2": 41,
         "secunde_z2": 925
       }
-    ],
-    "nota": "Seara (SP1.1, SP1.8, SP1.9) pulsul e cu ~15-20 bpm peste dimineata la aceeasi putere; deriva cardiaca in blocuri de 6-8 min dupa ~4 min. Rezistenta Z2 calibrata 30 vine din valori amestecate (18, 30, 41); SP1.9 da 41 la 100-107 W."
+    ]
   },
   "volum_aerob_combinat": {
     "total_h": 12.7,
